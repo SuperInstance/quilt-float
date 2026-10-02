@@ -1,7 +1,13 @@
 {
-  "gitTip": null,
-  "chainTip": null,
-  "cellsSeen": {},
-  "cells": 0,
-  "whyRate": null
+  "gitTip": "0e1650251e0904766e2c99be883398592c664c46",
+  "chainTip": "5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871",
+  "cellsSeen": {
+    "beta-001": "6bb416e610d0ce355731efae49b77493aa6dca1f36e8c9815403286f6c0ae608",
+    "beta-002": "885c8daa3e19ae92d351eced32fd8729adf75c904405814e27dea5a85d9a5a9f",
+    "beta-003": "d9bbc6132b933bd77560216075f5a9525081f429c160c1eb892ef8a647863656",
+    "beta-004": "19f70cdedec6208b17b566b4ea28f5bed6ce12da1885b3e066417e41ce9dc53d",
+    "beta-005": "4cd5fcf8186c416f967ac2766c11a01374653f9f93dc3d6dabffb77e346238eb"
+  },
+  "cells": 5,
+  "whyRate": 0.6
 }

@@ -1,18 +1,17 @@
 {
   "agent": "alpha",
   "branch": "float/alpha",
-  "chainTip": "4fef4ee952be27ef60081f07fd290ffa90acaab71109d9d085dffb335de81194",
-  "cells": 6,
-  "whys": 4,
-  "whyRate": 0.6667,
+  "chainTip": "69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b",
+  "cells": 7,
+  "whys": 5,
+  "whyRate": 0.7143,
   "regressions": 0,
   "lessons": 2,
   "foreign": {
-    "gitTip": null,
-    "chainTip": null,
-    "cellsSeen": {},
-    "cells": 0,
-    "whyRate": null
+    "gitTip": "0e1650251e0904766e2c99be883398592c664c46",
+    "chainTip": "5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871",
+    "cells": 5,
+    "whyRate": 0.6
   },
-  "updatedAt": "2026-10-02T20:08:49.051Z"
+  "updatedAt": "2026-10-02T20:08:51.342Z"
 }
