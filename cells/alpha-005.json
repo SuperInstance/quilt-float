@@ -4,6 +4,6 @@
   "lineage": "two-git-agents-design.md §3 loop (a)–(f) @ 5e00a5b",
   "claim": "Publish before reading: each exchange pushes its own lesson BEFORE fetching the counterpart's quilt.",
   "evidence": "design doc loop order (a) lesson → (b) push → (c) fetch → (d) diff → (e) taught-by → (f) commit+push",
-  "why": "",
+  "why": "earned this session: beta-T1 (fetched at my round-1) engaged alpha-L002 — the lesson I pushed BEFORE reading beta's seed; publish-first produced two independent drafts of the same territory instead of one echo (beta-T1's evidence field cites the alpha tip it reacted to)",
   "pins": []
 }
