@@ -20,6 +20,7 @@ import path from 'node:path';
 import {
   sha256, nowIso, REDACT, git, writeJson, readJson,
   chainFile, readChain, chainTipOf, chainAppend, metricsOfDir, appendJsonl,
+  validateDirective,
 } from './float-lib.mjs';
 
 const [, , cmd, cloneDir, directivePath, runsDir] = process.argv;
@@ -31,6 +32,18 @@ if (cmd !== 'tick' || !cloneDir || !directivePath || !runsDir) {
 const fail = (msg) => { console.error(`AGENT-ABORT: ${msg}`); process.exit(2); };
 
 const d = readJson(directivePath);
+
+// ---- 0. L21: validate the exchange BEFORE the tick — fail-closed, named error, no mutation ----
+// Chain integrity and schema completeness are DIFFERENT laws (session 1, tick 3: the chain
+// accepted a dangling entry while the tick died on lesson.bodyMd). Refuse here, pre-tick,
+// naming the missing field — nothing below this line runs on a malformed directive.
+const schema = validateDirective(d);
+if (!schema.ok) {
+  fail(`E_DIRECTIVE_SCHEMA: directive ${path.basename(directivePath)} refused pre-tick — ${schema.detail}`);
+}
+L(`directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)`);
+L('');
+
 const agent = d.agent;
 const other = agent === 'alpha' ? 'beta' : 'alpha';
 const branch = `float/${agent}`;

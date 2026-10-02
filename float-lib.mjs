@@ -100,7 +100,81 @@ export function readCellsDir(dir) {
 }
 export const metricsOfDir = (dir) => metrics(readCellsDir(dir));
 
-// ---------- 3. the fixed menu ----------
+// ---------- 3. directive schema (L21: validate the exchange BEFORE the tick) ----------
+// Chain integrity and schema completeness are DIFFERENT laws: the receipt chain will happily
+// accept a dangling entry (it did — tick 3, session 1), so the directive is validated
+// fail-closed BEFORE agent.mjs mutates anything. Missing fields are NAMED in the detail.
+export function validateDirective(d) {
+  const errs = [];
+  const miss = (p) => errs.push(`missing field: ${p}`);
+  const bad = (p, why) => errs.push(`bad field: ${p} (${why})`);
+  const isStr = (v) => typeof v === 'string' && v.trim().length > 0;
+  if (!d || typeof d !== 'object' || Array.isArray(d)) {
+    return { ok: false, error: 'E_DIRECTIVE_SCHEMA', detail: 'directive is not a JSON object' };
+  }
+  if (d.kind !== 'seed' && d.kind !== 'exchange') {
+    bad('kind', `expected 'seed' | 'exchange', got ${JSON.stringify(d.kind)}`);
+  }
+  if (d.agent !== 'alpha' && d.agent !== 'beta') {
+    bad('agent', `expected 'alpha' | 'beta', got ${JSON.stringify(d.agent)}`);
+  }
+  if (!isStr(d.tickLabel)) miss('tickLabel');
+  const les = d.lesson;
+  if (!les || typeof les !== 'object' || Array.isArray(les)) {
+    miss('lesson');
+  } else {
+    // kind-aware lesson shape: a SEED lesson is the lineage essay (claims live in d.cells);
+    // an EXCHANGE lesson carries its own cell (cellId/claim/evidence/why required).
+    const common = ['n', 'slug', 'title', 'bodyMd'];
+    const exchangeOnly = ['cellId', 'claim', 'evidence', 'why'];
+    for (const f of [...common, ...(d.kind === 'exchange' ? exchangeOnly : [])]) {
+      if (les[f] === undefined) miss(`lesson.${f}`);
+    }
+    if (les.n !== undefined && (!Number.isInteger(les.n) || les.n < 1)) {
+      bad('lesson.n', 'must be an integer >= 1');
+    }
+    for (const f of ['slug', 'title', ...exchangeOnly]) {
+      if (les[f] !== undefined && !isStr(les[f])) bad(`lesson.${f}`, 'must be a non-empty string');
+    }
+    // the tick-3 killer: agent.mjs dereferences les.bodyMd.trim() — must be a non-empty string
+    if (les.bodyMd !== undefined && !isStr(les.bodyMd)) bad('lesson.bodyMd', 'must be a non-empty string');
+    if (les.pins !== undefined && !Array.isArray(les.pins)) bad('lesson.pins', 'must be an array');
+  }
+  if (d.kind === 'seed') {
+    if (!Array.isArray(d.cells) || d.cells.length === 0) miss('cells');
+  }
+  if (d.kind === 'exchange') {
+    const tb = d.taughtBy;
+    if (!tb || typeof tb !== 'object' || Array.isArray(tb)) {
+      miss('taughtBy');
+    } else {
+      for (const f of ['cellId', 'target', 'verdict', 'claim', 'evidence', 'why', 'bodyMd']) {
+        if (tb[f] === undefined) miss(`taughtBy.${f}`);
+      }
+      for (const f of ['cellId', 'target', 'verdict', 'claim', 'evidence', 'why']) {
+        if (tb[f] !== undefined && !isStr(tb[f])) bad(`taughtBy.${f}`, 'must be a non-empty string');
+      }
+      // taughtBy.bodyMd feeds .replaceAll — same crash class as lesson.bodyMd
+      if (tb.bodyMd !== undefined && !isStr(tb.bodyMd)) bad('taughtBy.bodyMd', 'must be a non-empty string');
+      if (!tb.expect || typeof tb.expect !== 'object' || !Array.isArray(tb.expect.newCellIds)) {
+        miss('taughtBy.expect.newCellIds');
+      }
+      if (tb.pins !== undefined && !Array.isArray(tb.pins)) bad('taughtBy.pins', 'must be an array');
+    }
+  }
+  if (d.resolveCells !== undefined) {
+    if (!Array.isArray(d.resolveCells)) bad('resolveCells', 'must be an array');
+    else for (const rc of d.resolveCells) {
+      if (!rc || !isStr(rc.id)) bad('resolveCells[].id', 'must be a non-empty string');
+      if (!rc || !rc.patch || typeof rc.patch !== 'object') bad('resolveCells[].patch', 'must be an object');
+    }
+  }
+  return errs.length
+    ? { ok: false, error: 'E_DIRECTIVE_SCHEMA', detail: errs.join('; ') }
+    : { ok: true, error: null, detail: null };
+}
+
+// ---------- 4. the fixed menu ----------
 export const MENU = {
   M1: 'your counterpart\'s why-rate is rising — visit their newest cell and pin or refute it',
   M2: 'you carry unresolved pins — verify or refute them offline before claiming anything new',
