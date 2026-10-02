@@ -4,6 +4,6 @@
   "lineage": "two-git-agents-design.md §2–3 @ 5e00a5b",
   "claim": "Diff the foreign quilt against memory of it before reacting — react to ref movement, never to assumption.",
   "evidence": "design doc: 'they don't talk — they publish, and git is the airwaves'; ls-remote polling is the PoC's proven primitive",
-  "why": "",
+  "why": "earned this round: my fetch diffed exactly 2 new foreign cells against memory pinned at beta's round-1 tip — 'new' is relative to MEMORY, not to the branch; without the pinned tip I would have re-read beta's whole quilt and risked reacting to already-consumed state",
   "pins": []
 }
