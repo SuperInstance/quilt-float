@@ -30,6 +30,8 @@ if (cmd !== 'tick' || !cloneDir || !directivePath || !runsDir) {
 }
 
 const fail = (msg) => { console.error(`AGENT-ABORT: ${msg}`); process.exit(2); };
+const log = [];
+const L = (s = '') => log.push(s);
 
 const d = readJson(directivePath);
 
@@ -49,8 +51,6 @@ const other = agent === 'alpha' ? 'beta' : 'alpha';
 const branch = `float/${agent}`;
 const otherBranch = `float/${other}`;
 const logPath = path.join(runsDir, 'logs', `${d.tickLabel}.log`);
-const log = [];
-const L = (s = '') => log.push(s);
 
 L(`# tick ${d.tickLabel} — agent ${agent} (${d.kind})`);
 L(`directive: ${path.relative(process.cwd(), directivePath)}`);
