@@ -1,26 +1,17 @@
 {
   "agent": "beta",
   "branch": "float/beta",
-  "chainTip": "fe0959a031bfbea630d8b1b1d8bb2abbcb5d7d7f8ce77aac896a135a9eaba43e",
-  "cells": 8,
-  "whys": 7,
-  "whyRate": 0.875,
+  "chainTip": "ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09",
+  "cells": 9,
+  "whys": 8,
+  "whyRate": 0.8889,
   "regressions": 0,
   "lessons": 3,
   "foreign": {
-    "gitTip": "e61ecb2b5e15777fc5a83983e75f37b0997c739b",
-    "chainTip": "69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b",
-    "cellsSeen": {
-      "alpha-001": "c35ce8b36ec7671a4c684860f80f8f68c63ac3e5a2fb891f27c6f7d2b145911c",
-      "alpha-002": "bb4ea1a62e95a603641359a5755c72a7e7589063c7cf37678a68dac5db499834",
-      "alpha-003": "d4a5224f52e7f15f62089172ceb0f93aa110d1b6a273958dec9afce45a53891b",
-      "alpha-004": "638c9ce63c31fab5a5a9399ca20d7b7a6d8a75919bd8d86d1728eb4f00476c6a",
-      "alpha-005": "d75f3096104e7e2aca46e976b0f8d5196d67293666eb580a01ca5862182a99a8",
-      "alpha-L002": "c4072b3ad26c24f7d3d4c3b2def02bea630342c6baf088ab0e7c5e20d5ecfe05",
-      "alpha-T1": "eeced29e5ef4ed62dcea29b3f24a6ca9b5d2a5090ebb968820a23b61bdb96eb9"
-    },
-    "cells": 7,
-    "whyRate": 0.7143
+    "gitTip": "5ee0c09ac9b0d3ad114e368d0311700dec46e6be",
+    "chainTip": "9c60af438672673be3d936ec1299c9859cbcab9a5845ef350d5ebeacc4151208",
+    "cells": 9,
+    "whyRate": 0.8889
   },
-  "updatedAt": "2026-10-02T20:09:06.423Z"
+  "updatedAt": "2026-10-02T20:09:09.038Z"
 }
