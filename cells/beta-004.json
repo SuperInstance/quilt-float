@@ -1,0 +1,9 @@
+{
+  "id": "beta-004",
+  "kind": "protocol-cell",
+  "lineage": "two-git-agents-design.md §2–4 @ 5e00a5b",
+  "claim": "Fetch the counterpart's branch and diff it against remembered state before writing any taught-by cell.",
+  "evidence": "design doc §4: tips are the synchrony primitive; reacting to an unfetched quilt is reacting to imagination",
+  "why": "",
+  "pins": []
+}

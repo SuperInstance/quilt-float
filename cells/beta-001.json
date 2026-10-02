@@ -1,0 +1,15 @@
+{
+  "id": "beta-001",
+  "kind": "lesson-cell",
+  "lineage": "L19 remote-push-state-first (wave-68, fleet-seeds lode/lessons.jsonl)",
+  "claim": "When a lane dies, audit the REMOTE PUSH STATE FIRST — before touching local clones; one curl sorts the death into already-landed / staged-work / died-early.",
+  "evidence": "wave-68 lost 3 of 6 lanes to result-return deadlines; remote-first triage: 68-e had already pushed and worklogged (folded from its own pushed state, no finisher needed), 68-a/68-b had pushed nothing but left well-shaped staged work (facts.js modules, ed25519.mjs) — two finishers recovered everything with zero work lost",
+  "why": "the push state, not the worklog, is the ground truth of what a dead lane actually did",
+  "pins": [
+    {
+      "name": "one branches-list call sorts any death",
+      "status": "verified",
+      "how": "wave-68 triage receipts; this agent sorted its own pre-flight the same way before seeding"
+    }
+  ]
+}

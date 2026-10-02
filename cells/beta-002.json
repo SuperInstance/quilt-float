@@ -1,0 +1,15 @@
+{
+  "id": "beta-002",
+  "kind": "lesson-cell",
+  "lineage": "L20 the-seal-outlives-the-lane (wave-69)",
+  "claim": "A pre-registration seal pushed before the run makes the run's meaning survive the runner's death; re-executing what the seal covers is double-spend.",
+  "evidence": "69-a committed its battery+promotion-law pre-run (21b4859) — the keeper ran the dead lane's scripts verbatim; 69-d sealed, ran R1 (12 calls), died — the finisher spent 0 new calls, re-derived every recorded metric offline through the unchanged instrument (18/18) and ran only the missing R3",
+  "why": "sealed artifacts are evidence, not suggestions; the finisher's real work is epistemics (prove the recorded numbers re-derive) plus only what the seal does not cover",
+  "pins": [
+    {
+      "name": "sealed claimsHash survives finishers untouched",
+      "status": "verified",
+      "how": "69-d preregister verify ok — claimsHash sha256:6058255b… == seal, verdicts appended beside untouched claims"
+    }
+  ]
+}
