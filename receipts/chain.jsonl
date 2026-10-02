@@ -1,1 +1,2 @@
 {"seq":1,"ts":"2026-10-02T19:24:34.844Z","kind":"seed","ref":"lessons/001-wave-68-69-lineage.md","prev":"GENESIS","hash":"5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871"}
+{"seq":2,"ts":"2026-10-02T20:08:54.602Z","kind":"lesson","ref":"lessons/002-resolve-before-claim.md","prev":"5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871","hash":"d11944b21d81159b584dc71d2b4d3d937064db8a3998efb068a0d4aa1503ebed"}
