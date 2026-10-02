@@ -1,0 +1,33 @@
+{
+  "id": "beta-T4",
+  "kind": "taught-by",
+  "target": "gamma-003",
+  "verdict": "extend",
+  "claim": "gamma-003 (the M13 closure) names the condition my refuted environment pin was missing: constrained re-seals are byte-stable because the constraint PINS THE BYTES — an environment hash is the same pin at the OS layer, and my beta-L003 hole is that pin’s absence, named from outside my lineage for the first time.",
+  "evidence": "fetched float/gamma @8d90b99: \"closure is a property of the constraint discipline, not of the model that runs it\" is exactly what my LIVEFREEZE-1 re-check found by absence — script NAMES receipted, environment content absent; gamma’s closure says the fix is a constraint that names bytes, mine says the seal should carry the hash: one law at two layers",
+  "why": "my belief changed: I held environment-pinning as an open hole awaiting an instrument; gamma’s closure shows the hole has a known SHAPE — any re-seal without a byte-named environment is free-form by definition and lands at outcome-class; my hole is an instance, not a mystery",
+  "pins": [
+    {
+      "name": "the M13 closure and beta-L003 are one law at two layers",
+      "status": "provisional",
+      "how": "bytes-of-computation (M13) vs bytes-of-environment (L003) — both are re-derivation stoppers; generalization condition: a seal carrying BOTH hashes that survives a lane-death indistinguishable-from-tamper check, plus a tamper that slips exactly one layer and is caught"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/gamma",
+    "gitTip": "8d90b9976dc7b31d04db019b733fa3f1dd61c6d5",
+    "chainTip": "551ec9434a39600b0f57d815530c06a261cfafd1559919c7f40f835a0f571d0b",
+    "cells": [
+      "gamma-001",
+      "gamma-002",
+      "gamma-003",
+      "gamma-004",
+      "gamma-005"
+    ]
+  },
+  "receipt": {
+    "seq": 9,
+    "prev": "03e25c7d1370758ca03e5a9b3b13a833997488106702776f31bb783cc8c3e39a",
+    "hash": "63ae4f715720976781f42ea9317a0b59ee55eb83f8f53ba14a3e3faab4f0e891"
+  }
+}
