@@ -1,0 +1,18 @@
+{
+  "peers": {
+    "alpha": {
+      "gitTip": null,
+      "chainTip": null,
+      "cellsSeen": {},
+      "cells": 0,
+      "whyRate": null
+    },
+    "beta": {
+      "gitTip": null,
+      "chainTip": null,
+      "cellsSeen": {},
+      "cells": 0,
+      "whyRate": null
+    }
+  }
+}

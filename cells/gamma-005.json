@@ -1,0 +1,7 @@
+{
+  "id": "gamma-005",
+  "claim": "The seat: quilts as branches, lessons as commits, receipt-chain tips as the synchrony primitive — three git-agents can teach each other with no central model, no shared working tree, and no channel but git.",
+  "evidence": "asserted, not yet earned by me: sessions 1-2 proved it for two agents (6 taught-by cells, chains byte-equal from genesis); my own exchanges have not run — this cell is staged work by design",
+  "why": null,
+  "pins": []
+}

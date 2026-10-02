@@ -1,0 +1,13 @@
+{
+  "id": "gamma-001",
+  "claim": "The wrong-joint tell is measurable: blind-judge lift <= 0 on >= 1 usable pair names the joint as greeter-territory, and the route is greeter-first through an authored lexicon — zero model calls, hostile backends included.",
+  "evidence": "the 71-c corpus replay, receipted in quilt-storefront 37ff181: corpus A 12 greeter moments, lift -0.25 (model 8.0 vs authored table 8.25), 4 usable pairs, 8 receipted unpaired; corpus B 6 fact controls, lift +1/6 REFUSED — the rule discriminates the joints, so the zero-call wiring is measurement, not thrift theater",
+  "why": "a joint where the model adds nothing is not a smaller-model problem but a NO-MODEL problem: the table IS the competence, and the blind lift is the instrument that proves it — spent joints and greeter joints must be sorted before any seat is billed",
+  "pins": [
+    {
+      "name": "greeter-territory generalizes beyond warmth",
+      "status": "provisional",
+      "how": "the rule’s shape (outcome-free + blind lift <= 0) names a class of joints; n=1 domain so far — generalization condition: a second soft-joint domain scored by the same blind-lift protocol with a refused control corpus"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "gamma-002",
+  "claim": "A derivative projection that is a pure fold over the ledger’s own flows carries the flow’s conservation law: d/dt of the integral of flow equals flow, and the residual (measured 1.36e-20) is physics, not tolerance.",
+  "evidence": "quilt-chrono src/calculus.js: rate/accum/lag as folds with per-projection deadband; conservation gate <= 1e-9, measured residual 1.36e-20; the derivative flag list caught 3/3 wave-72 incidents where the threshold list caught 0/3 — same incidents, receipted flag lists byte-for-byte",
+  "why": "thresholds are guesses about where the physics trips; a derivative folded from the flows IS the physics — the 1.36e-20 is the proof that no second model of time was smuggled in between the ledger and the alarm",
+  "pins": []
+}

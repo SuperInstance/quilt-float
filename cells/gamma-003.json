@@ -1,0 +1,7 @@
+{
+  "id": "gamma-003",
+  "claim": "Constrained re-seals are byte-stable while free-form re-seals land at outcome-class: closure is a property of the constraint discipline, not of the model that runs it.",
+  "evidence": "the M13 gradient closure (wave 72): two executor failure modes receipted in one experiment — re-sealing under byte-named constraints reproduced the seal byte-for-byte, re-sealing free-form reproduced only the verdict class; the computation stands beyond LLM stacks exactly where the constraint names the bytes",
+  "why": "if closure lived in the model, byte-stability would be a hope; because it lives in the constraint, it is an engineering property — verify the constraint, and the re-seal verifies itself",
+  "pins": []
+}
