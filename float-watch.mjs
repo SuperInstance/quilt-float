@@ -79,8 +79,12 @@ function crossChecks(cwd, agent, st, otherTip, otherChainHashes) {
     const e = st.chain.find(x => x.ref === `cells/${c.id}.json`);
     if (!e) errs.push(`TAUGHTBY_NO_CHAIN_ENTRY ${c.id}`);
     else if (!c.receipt || c.receipt.hash !== e.hash) errs.push(`TAUGHTBY_RECEIPT_MISMATCH ${c.id}`);
+    // (iv) no half-materialized citations: an unsubstituted {{FOREIGN_*}} placeholder in a
+    // published cell is a template that never met the fetch it claims to describe
+    if (JSON.stringify(c).includes('{{FOREIGN_'))
+      errs.push(`TAUGHTBY_TEMPLATE_LEAK ${c.id}: unpublished placeholder in published cell`);
   }
-  // (iv) state.json dials must not lie
+  // (v) state.json dials must not lie
   if (st.state) {
     const s = st.state;
     if (s.chainTip !== st.v.tip) errs.push(`STATE_CHAIN_TIP_LIE: ${s.chainTip} != ${st.v.tip}`);

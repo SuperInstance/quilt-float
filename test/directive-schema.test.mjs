@@ -51,6 +51,13 @@ console.log('# 4. a complete directive passes');
 ok(validateDirective(clone(ex)).ok === true, 'complete exchange directive passes');
 ok(validateDirective(clone(seed)).ok === true, 'complete seed directive passes');
 
+console.log('# 4b. a lesson is authored BLIND — foreign placeholders in lesson strings refuse');
+const blind = clone(ex);
+blind.lesson.bodyMd = 'after the fetch I saw {{FOREIGN_GIT_TIP}} ...';
+const r4b = validateDirective(blind);
+ok(r4b.ok === false && r4b.error === 'E_DIRECTIVE_SCHEMA', 'lesson with {{FOREIGN_*}} placeholder refused');
+ok(/lesson\.bodyMd/.test(r4b.detail), `detail names lesson.bodyMd (got: ${r4b.detail})`);
+
 console.log('# 5. every shipped directive passes the gate (the live pack is sealed-valid)');
 for (const f of fs.readdirSync(DIRECTIVES).filter(f => f.endsWith('.json')).sort()) {
   const d = JSON.parse(fs.readFileSync(path.join(DIRECTIVES, f), 'utf8'));

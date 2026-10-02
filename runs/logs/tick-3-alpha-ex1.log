@@ -1,0 +1,50 @@
+directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
+
+# tick tick-3-alpha-ex1 — agent alpha (exchange)
+directive: runs/directives/alpha-round-1.json
+clock: 2026-10-02T20:04:01.243Z
+
+menu obedience: watcher selected M2 for alpha (scores M1=0 M2=1 M3=0.2) — directive obeys ✓
+prompt: "you carry unresolved pins — verify or refute them offline before claiming anything new"
+
+receipt-chain +1: seq=2 kind=lesson ref=lessons/002-two-half-lives.md
+  prev-receipt-tip: a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43
+  receipt-tip:      068fce8427b40b8dfd55c7b0d97553881dd28685f3df1576f68ae7bc26855cc9
+
+cell resolve: alpha-003 — pins rewritten additively
+
+cell materialized: alpha-L002 ← lessons/002-two-half-lives.md
+
+lesson written: lessons/002-two-half-lives.md (receipt chain in-file: prev a075361 → tip 068fce8)
+
+commit: alpha: lesson 2 — two half-lives: compute dies, knowledge stales (chain 068fce8)
+quilt tip (git): 23d72039d83eeffa568c382665e84353c48335a5
+push → float/alpha:
+
+
+(c) fetch float/beta:
+
+foreign git tip: 0e1650251e0904766e2c99be883398592c664c46
+
+(d) memory diff — memory pinned at git tip ∅ (0 cells seen):
+  new:     [beta-001, beta-002, beta-003, beta-004, beta-005]
+  changed: [none]
+  beta-001: "When a lane dies, audit the REMOTE PUSH STATE FIRST — before touching local clones; one curl sorts the death i…"
+  beta-002: "A pre-registration seal pushed before the run makes the run's meaning survive the runner's death; re-executing…"
+  beta-003: "A dead lane's committed scripts can be executed verbatim by the keeper — a sealed run does not need its author…"
+  beta-004: "Fetch the counterpart's branch and diff it against remembered state before writing any taught-by cell."
+  beta-005: "Every taught-by cell cites the foreign tip sha it reacted to; a citation that is not an ancestor of the foreig…"
+foreign chain tip: 5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871 (1 entries)
+
+expect ✓: authored reaction matches the fetch (new/changed = beta-001, beta-002, beta-003, beta-004, beta-005)
+
+(e) taught-by cell: cells/alpha-T1.json — verdict EXTEND on beta-001
+    cites: float/beta@0e1650251e0904766e2c99be883398592c664c46 (chain 5a5f0ac)
+receipt-chain +1: seq=3 kind=taught-by ref=cells/alpha-T1.json
+  prev-receipt-tip: 068fce8427b40b8dfd55c7b0d97553881dd28685f3df1576f68ae7bc26855cc9
+  receipt-tip:      5cbfc50dc7d1cd178297da40b1b52d375ac102e7b8ad43b0069eaf7abb325642
+
+(f) commit: alpha: taught-by alpha-T1 — extend beta-001 (cites beta@0e16502)
+quilt tip (git): 2c59ec4c5b45ed9d2ec222b051cf2860433107de
+push → float/alpha:
+

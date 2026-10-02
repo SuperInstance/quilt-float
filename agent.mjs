@@ -193,16 +193,21 @@ if (d.kind === 'exchange') {
   // (e) taught-by cell, citing the foreign tip shas
   const tb = d.taughtBy;
   const diffText = got.map(id => `- ${id} (${newIds.includes(id) ? 'new' : 'changed'})`).join('\n');
-  const body = tb.bodyMd
+  // Materialize EVERY foreign placeholder in EVERY taught-by string (attempt-1 lesson:
+  // substituting only bodyMd leaked {{FOREIGN_GIT_TIP_SHORT}} into evidence prose — a
+  // half-materialized citation; the watcher now halts on any residue, named error).
+  const subst = (s) => String(s)
     .replaceAll('{{FOREIGN_GIT_TIP}}', fTip)
     .replaceAll('{{FOREIGN_GIT_TIP_SHORT}}', fTip.slice(0, 7))
     .replaceAll('{{FOREIGN_CHAIN_TIP}}', fChainTip)
     .replaceAll('{{FOREIGN_NEW_CELLS}}', diffText)
     .replaceAll('{{FOREIGN_DIFF}}', diffText);
+  const body = subst(tb.bodyMd);
   const tbRel = `cells/${tb.cellId}.json`;
   const tbCell = {
-    id: tb.cellId, kind: 'taught-by', target: tb.target, verdict: tb.verdict,
-    claim: tb.claim, evidence: tb.evidence, why: tb.why, pins: tb.pins ?? [],
+    id: tb.cellId, kind: 'taught-by', target: subst(tb.target), verdict: tb.verdict,
+    claim: subst(tb.claim), evidence: subst(tb.evidence), why: subst(tb.why),
+    pins: (tb.pins ?? []).map(p => ({ ...p, name: subst(p.name ?? ''), how: subst(p.how ?? '') })),
     cites: { foreignBranch: otherBranch, gitTip: fTip, chainTip: fChainTip, cells: got },
   };
   const e2 = chainAppend(cloneDir, agent, { kind: 'taught-by', ref: tbRel, ts: nowIso() });

@@ -1,0 +1,52 @@
+directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
+
+# tick tick-4-beta-ex1 — agent beta (exchange)
+directive: runs/directives/beta-round-1.json
+clock: 2026-10-02T20:04:06.740Z
+
+menu obedience: watcher selected M2 for beta (scores M1=0 M2=1 M3=0.2) — directive obeys ✓
+prompt: "you carry unresolved pins — verify or refute them offline before claiming anything new"
+
+receipt-chain +1: seq=2 kind=lesson ref=lessons/002-resolve-before-claim.md
+  prev-receipt-tip: 5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871
+  receipt-tip:      2740578086297e98a9a6e6b6fc8d751b3eaea85eb7f1a6ab16f3fe8d3a3fc6f3
+
+cell resolve: beta-003 — claim, pins rewritten additively
+
+cell materialized: beta-L002 ← lessons/002-resolve-before-claim.md
+
+lesson written: lessons/002-resolve-before-claim.md (receipt chain in-file: prev 5a5f0ac → tip 2740578)
+
+commit: beta: lesson 2 — resolve before claim: the live-freeze environment pin is refuted as claimed (chain 2740578)
+quilt tip (git): 94ef3245e0ca1034b0c322bd86d3c27d50b3e3af
+push → float/beta:
+
+
+(c) fetch float/alpha:
+
+foreign git tip: 2c59ec4c5b45ed9d2ec222b051cf2860433107de
+
+(d) memory diff — memory pinned at git tip ∅ (0 cells seen):
+  new:     [alpha-001, alpha-002, alpha-003, alpha-004, alpha-005, alpha-L002, alpha-T1]
+  changed: [none]
+  alpha-001: "For ephemeral compute, the FIRST success criterion is an evidence-branch push from inside the environment — be…"
+  alpha-002: "Every scout item has a half-life: before executing any queued fix/probe, RE-VERIFY the defect still exists at …"
+  alpha-003: "When the census names a missing organ, expect MULTIPLE agents to build it independently the same day — verify-…"
+  alpha-004: "Diff the foreign quilt against memory of it before reacting — react to ref movement, never to assumption."
+  alpha-005: "Publish before reading: each exchange pushes its own lesson BEFORE fetching the counterpart's quilt."
+  alpha-L002: "Evidence has two half-lives: compute dies in hours, knowledge stales in rounds — so push evidence early AND re…"
+  alpha-T1: "beta-001 (remote-push-state-first) is my alpha-001 generalized from boot-time to death-time: one curl against …"
+foreign chain tip: 5cbfc50dc7d1cd178297da40b1b52d375ac102e7b8ad43b0069eaf7abb325642 (3 entries)
+
+expect ✓: authored reaction matches the fetch (new/changed = alpha-001, alpha-002, alpha-003, alpha-004, alpha-005, alpha-L002, alpha-T1)
+
+(e) taught-by cell: cells/beta-T1.json — verdict AGREE on alpha-003
+    cites: float/alpha@2c59ec4c5b45ed9d2ec222b051cf2860433107de (chain 5cbfc50)
+receipt-chain +1: seq=3 kind=taught-by ref=cells/beta-T1.json
+  prev-receipt-tip: 2740578086297e98a9a6e6b6fc8d751b3eaea85eb7f1a6ab16f3fe8d3a3fc6f3
+  receipt-tip:      32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f
+
+(f) commit: beta: taught-by beta-T1 — agree alpha-003 (cites alpha@2c59ec4)
+quilt tip (git): 35c00b17dd13b42176654dd4a11baa408e0563a7
+push → float/beta:
+

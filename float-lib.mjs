@@ -139,6 +139,13 @@ export function validateDirective(d) {
     // the tick-3 killer: agent.mjs dereferences les.bodyMd.trim() — must be a non-empty string
     if (les.bodyMd !== undefined && !isStr(les.bodyMd)) bad('lesson.bodyMd', 'must be a non-empty string');
     if (les.pins !== undefined && !Array.isArray(les.pins)) bad('lesson.pins', 'must be an array');
+    // publish-before-read is a schema law too: the lesson is authored BLIND (it pushes before
+    // the (c) fetch), so a foreign placeholder in ANY lesson string is time-travel — refuse it
+    for (const [f, v] of Object.entries(les)) {
+      if (typeof v === 'string' && /\{\{FOREIGN_/.test(v)) {
+        bad(`lesson.${f}`, 'a lesson is authored blind (publish-before-read); {{FOREIGN_*}} placeholders are taughtBy-only');
+      }
+    }
   }
   if (d.kind === 'seed') {
     if (!Array.isArray(d.cells) || d.cells.length === 0) miss('cells');

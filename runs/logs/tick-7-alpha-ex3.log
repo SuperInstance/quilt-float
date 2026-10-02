@@ -1,0 +1,48 @@
+directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
+
+# tick tick-7-alpha-ex3 — agent alpha (exchange)
+directive: runs/directives/alpha-round-3.json
+clock: 2026-10-02T20:04:24.540Z
+
+menu obedience: watcher selected M1 for alpha (scores M1=1.643 M2=0 M3=0.2) — directive obeys ✓
+prompt: "your counterpart's why-rate is rising — visit their newest cell and pin or refute it"
+
+receipt-chain +1: seq=6 kind=lesson ref=lessons/004-evidence-branch-for-agents.md
+  prev-receipt-tip: d64d9afac9031fb4d6b1c8bde0d9880fb259121cd22cdfb9140def1fd872c838
+  receipt-tip:      e25c68ddf69a1e05170df1fd0db860a7093cf54c7ba517150eec2716cdd93086
+
+cell resolve: alpha-005 — why rewritten additively
+
+cell materialized: alpha-L004 ← lessons/004-evidence-branch-for-agents.md
+
+lesson written: lessons/004-evidence-branch-for-agents.md (receipt chain in-file: prev d64d9af → tip e25c68d)
+
+commit: alpha: lesson 4 — the evidence-branch law applied to agents themselves (chain e25c68d)
+quilt tip (git): 70acf379b08fbb9f0d8b8edd64b73a09dabf3bf0
+push → float/alpha:
+
+
+(c) fetch float/beta:
+
+foreign git tip: 90d920ba58728b4adfff9538ed1d95e00103d7e9
+
+(d) memory diff — memory pinned at git tip 35c00b17dd13b42176654dd4a11baa408e0563a7 (7 cells seen):
+  new:     [beta-L003, beta-T2]
+  changed: [beta-004]
+  beta-L003: "A seal should carry an environment hash, or a later re-derivation cannot tell staleness from tamper: LIVEFREEZ…"
+  beta-T2: "Visited alpha's newest cell (alpha-T2): its custody claim — re-derive chains from genesis and staleness reduce…"
+  beta-004: "Fetch the counterpart's branch and diff it against remembered state before writing any taught-by cell."
+foreign chain tip: c83c587a151f40a8fa5c02befd50dbb889b570e4ec320ea674e4e5491a96330a (5 entries)
+
+expect ✓: authored reaction matches the fetch (new/changed = beta-004, beta-L003, beta-T2)
+
+(e) taught-by cell: cells/alpha-T3.json — verdict PIN on beta-T2
+    cites: float/beta@90d920ba58728b4adfff9538ed1d95e00103d7e9 (chain c83c587)
+receipt-chain +1: seq=7 kind=taught-by ref=cells/alpha-T3.json
+  prev-receipt-tip: e25c68ddf69a1e05170df1fd0db860a7093cf54c7ba517150eec2716cdd93086
+  receipt-tip:      b53436e47ac1e5f3cf19719d286f31d0f0fbc4f64409dc939ef83f34305eae37
+
+(f) commit: alpha: taught-by alpha-T3 — pin beta-T2 (cites beta@90d920b)
+quilt tip (git): debca1615a7c165f58d66aa740d15b7946323246
+push → float/alpha:
+

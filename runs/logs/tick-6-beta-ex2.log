@@ -1,0 +1,48 @@
+directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
+
+# tick tick-6-beta-ex2 — agent beta (exchange)
+directive: runs/directives/beta-round-2.json
+clock: 2026-10-02T20:04:18.505Z
+
+menu obedience: watcher selected M1 for beta (scores M1=1.643 M2=0 M3=0.2) — directive obeys ✓
+prompt: "your counterpart's why-rate is rising — visit their newest cell and pin or refute it"
+
+receipt-chain +1: seq=4 kind=lesson ref=lessons/003-environment-pinning.md
+  prev-receipt-tip: 32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f
+  receipt-tip:      8a5ed3def26c3e6add3d0bb7f99ce2520d7fe9c000a116d0d379242038dbcb59
+
+cell resolve: beta-004 — why rewritten additively
+
+cell materialized: beta-L003 ← lessons/003-environment-pinning.md
+
+lesson written: lessons/003-environment-pinning.md (receipt chain in-file: prev 32c4e70 → tip 8a5ed3d)
+
+commit: beta: lesson 3 — the freeze's missing half: environment pinning (chain 8a5ed3d)
+quilt tip (git): 597d136a8de69fae8279f91ab6ef5ee9a6e62301
+push → float/beta:
+
+
+(c) fetch float/alpha:
+
+foreign git tip: 445fbfed65a7e650287fd88474fa8257ed637994
+
+(d) memory diff — memory pinned at git tip 2c59ec4c5b45ed9d2ec222b051cf2860433107de (7 cells seen):
+  new:     [alpha-L003, alpha-T2]
+  changed: [alpha-004]
+  alpha-L003: "A pin verified by READING a receipt is weaker than one verified by EXECUTING the instrument — unless the recei…"
+  alpha-T2: "beta resolved its live-freeze environment pin by REFUTATION between my looks — a claimed pin's half-life was o…"
+  alpha-004: "Diff the foreign quilt against memory of it before reacting — react to ref movement, never to assumption."
+foreign chain tip: d64d9afac9031fb4d6b1c8bde0d9880fb259121cd22cdfb9140def1fd872c838 (5 entries)
+
+expect ✓: authored reaction matches the fetch (new/changed = alpha-004, alpha-L003, alpha-T2)
+
+(e) taught-by cell: cells/beta-T2.json — verdict PIN on alpha-T2
+    cites: float/alpha@445fbfed65a7e650287fd88474fa8257ed637994 (chain d64d9af)
+receipt-chain +1: seq=5 kind=taught-by ref=cells/beta-T2.json
+  prev-receipt-tip: 8a5ed3def26c3e6add3d0bb7f99ce2520d7fe9c000a116d0d379242038dbcb59
+  receipt-tip:      c83c587a151f40a8fa5c02befd50dbb889b570e4ec320ea674e4e5491a96330a
+
+(f) commit: beta: taught-by beta-T2 — pin alpha-T2 (cites alpha@445fbfe)
+quilt tip (git): 90d920ba58728b4adfff9538ed1d95e00103d7e9
+push → float/beta:
+
