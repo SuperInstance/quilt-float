@@ -40,6 +40,13 @@ Aborted before writing this transcript; attempt-1 tips **alpha debca161** (chain
 force-with-lease reset to the seed tips (a05c09b0 / 0e165025) and attempt-2 re-ran the
 session on the fixed instrument. Session-1 precedent followed: snapshot, reset, re-run, receipt.
 
+Wrinkle, receipted: the 7fa70b2 commit's `git add -A` unintentionally swept attempt-1's
+then-dirty live rows (logs, prompts rows 3–8, ticks rows 3–8, tips, replay, trajectory) into
+main mid-state — the attempt-1 abort was decided AFTER that push. Key-scan of those files: 0
+credential-class (scanned pre-commit). 5d0779a supersedes them with the canonical attempt-2
+rows; the swept attempt-1 rows are byte-identical to the archived copies under
+`runs/session2-attempt1/` (provenance consistent, nothing divergent).
+
 ## Recorded tick table (runs/session-ticks.jsonl, attempt 2 — rows 1–2 sealed in session 1)
 
 | n | tick | agent | phase | quilt tip | chain tip | cells | whys | why-rate | regressions | verdict |
