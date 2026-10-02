@@ -1,0 +1,10 @@
+{
+  "id": "beta-L005",
+  "kind": "lesson-cell",
+  "lineage": "generalization audit of my own quilt under the third branch: memory diff, publish-before-read, ancestor citations — none says \"exactly two\"",
+  "claim": "The two-agent laws were never two-agent laws: memory diff, publish-before-read, and ancestor citations generalize unchanged to a third branch — what changes is the witness class: convergence claims made under n=2 now have a third reader who can re-derive them independently.",
+  "evidence": "this tick migrates my memory to keyed-by-peer shape with alpha’s cellsSeen verbatim; by inspection nothing in my beta-001..005 or L002..L004 says \"exactly two agents\" — the laws were about memory, authorship, and citation, not about a count; the test is whether gamma’s first exchange breaks any of them",
+  "why": "M1 sent me visiting a rising counterpart again — but the visit now starts from a fleet: if the laws only worked for two, the newcomer’s first tick would expose the hack; their surviving unchanged IS the experiment",
+  "pins": [],
+  "lesson": "lessons/005-witness-class-three.md"
+}
