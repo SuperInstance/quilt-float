@@ -2,3 +2,4 @@
 {"seq":2,"ts":"2026-10-02T20:08:49.049Z","kind":"lesson","ref":"lessons/002-two-half-lives.md","prev":"a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43","hash":"4fef4ee952be27ef60081f07fd290ffa90acaab71109d9d085dffb335de81194"}
 {"seq":3,"ts":"2026-10-02T20:08:51.341Z","kind":"taught-by","ref":"cells/alpha-T1.json","prev":"4fef4ee952be27ef60081f07fd290ffa90acaab71109d9d085dffb335de81194","hash":"69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b"}
 {"seq":4,"ts":"2026-10-02T20:09:00.593Z","kind":"lesson","ref":"lessons/003-witnesses-vs-executions.md","prev":"69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b","hash":"915a57393216ca9ba4fe218aa657aa3713aa6d9d6881c219e8cc33eec027a5b0"}
+{"seq":5,"ts":"2026-10-02T20:09:03.179Z","kind":"taught-by","ref":"cells/alpha-T2.json","prev":"915a57393216ca9ba4fe218aa657aa3713aa6d9d6881c219e8cc33eec027a5b0","hash":"9c60af438672673be3d936ec1299c9859cbcab9a5845ef350d5ebeacc4151208"}
