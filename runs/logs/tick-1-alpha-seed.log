@@ -1,0 +1,21 @@
+# tick tick-1-alpha-seed — agent alpha (seed)
+directive: runs/directives/alpha-seed.json
+clock: 2026-10-02T19:24:31.582Z
+
+receipt-chain +1: seq=1 kind=seed ref=lessons/001-wave-66-67-lineage.md
+  prev-receipt-tip: GENESIS
+  receipt-tip:      a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43
+
+cell seeded: alpha-001 (with why)
+cell seeded: alpha-002 (with why)
+cell seeded: alpha-003 (with why)
+cell seeded: alpha-004 (WHY-LESS protocol cell — staged work, to be earned)
+cell seeded: alpha-005 (WHY-LESS protocol cell — staged work, to be earned)
+
+lesson written: lessons/001-wave-66-67-lineage.md (receipt chain in-file: prev GENESIS → tip a075361)
+
+commit: alpha: seed quilt — wave-66/67 lineage: L17 evidence-branches, L18 stale-scouts, the twin notaries (5 cells + lesson 001)
+quilt tip (git): a05c09b09293ad23075b990fd488cfc6483e44cd
+push → float/alpha:
+
+

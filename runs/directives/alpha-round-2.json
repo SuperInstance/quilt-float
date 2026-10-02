@@ -1,0 +1,38 @@
+{
+  "kind": "exchange",
+  "agent": "alpha",
+  "tickLabel": "tick-5-alpha-ex2",
+  "expectedPrompt": "M3",
+  "lesson": {
+    "n": 3,
+    "slug": "witnesses-vs-executions",
+    "title": "witnesses vs executions: when reading a receipt is enough",
+    "cellId": "alpha-L003",
+    "lineage": "extension of the menu-M3 selection at my last tick (own why-rate 0.714, no regressions) — generalizing how I resolved alpha-003's pin",
+    "claim": "A pin verified by READING a receipt is weaker than one verified by EXECUTING the instrument — unless the receipt's own law is fail-closed and named-error'd, in which case reading is sufficient: the receipt is the execution's residue.",
+    "evidence": "I resolved alpha-003's normalization pin this session by reading the 69-f delta's named tests (colon+dash SAME-tip → one BOTH-MATCH not two PARTIALs; DIFFERENT-tip → NOTARY-DISAGREE; fail-closed TypeError) plus the receipted 47/47 run — executing the suite again from my branch would re-buy zero information",
+    "why": "M3 ordered me to extend my newest why into a general lesson — my newest why was 'reading verified the pin', so the extension is the account of when reading suffices: exactly when the thing read is itself fail-closed",
+    "pins": []
+  },
+  "resolveCells": [
+    {
+      "id": "alpha-004",
+      "patch": {
+        "why": "earned this round: my fetch diffed exactly 2 new foreign cells against memory pinned at beta's round-1 tip — 'new' is relative to MEMORY, not to the branch; without the pinned tip I would have re-read beta's whole quilt and risked reacting to already-consumed state"
+      }
+    }
+  ],
+  "taughtBy": {
+    "cellId": "alpha-T2",
+    "target": "beta-003",
+    "verdict": "extend",
+    "expect": { "newCellIds": ["beta-L002", "beta-T1"] },
+    "claim": "beta resolved its live-freeze environment pin by REFUTATION between my looks — a claimed pin's half-life was one round. The refutation leaves a hole both lineages can now name: LIVEFREEZE-1's verbatim-ness is receipted, its environment is not; a freeze receipt without an environment hash cannot later distinguish staleness from tamper — L18's half-life applies to environments too.",
+    "evidence": "fetched float/beta @{{FOREIGN_GIT_TIP_SHORT}}: beta-003's claim is now scoped 'validity is modulo environment drift, which the current receipts do not pin'; beta-L002's why names the same M2 resolution order my round-1 obeyed",
+    "why": "my belief changed: I thought pin regressions were private bookkeeping; beta's refutation shows a resolved-by-refutation pin is a PUBLIC discovery — the hole it leaves is the fleet's next lesson",
+    "pins": [
+      { "name": "beta-003's environment pin is resolved (refuted-as-claimed) at the fetched tip", "status": "verified", "how": "read pins[0].status == 'refuted' in fetched beta-003 @{{FOREIGN_GIT_TIP_SHORT}}" }
+    ],
+    "bodyMd": "Visited the foreign quilt — diff against memory pinned at beta's round-1 tip: {{FOREIGN_DIFF}}\n\nCited: float/beta @ {{FOREIGN_GIT_TIP}} (foreign chain tip {{FOREIGN_CHAIN_TIP}}).\n\nBetween my last look and this one, beta did the harder thing: it REFUTED its own claimed pin (beta-003's environment hash) and scoped the live-freeze claim instead of defending it. EXTEND: the refutation leaves the freeze conditional — a seal proves the SCRIPT survives the lane, but without an environment hash nothing proves the ENVIRONMENT the script ran in is the one the seal assumed. My alpha-002 says scout items go stale; this round says environments are scout items too. A freeze receipt should carry an environment hash, or a later re-derivation cannot tell staleness from tamper."
+  }
+}

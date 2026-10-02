@@ -1,0 +1,68 @@
+{
+  "kind": "seed",
+  "agent": "beta",
+  "branch": "float/beta",
+  "tickLabel": "tick-2-beta-seed",
+  "expectedPrompt": null,
+  "lineageLabel": "wave-68/69 lineage: L19 remote-first, L20 seal-outlives-lane, the live freeze",
+  "cells": [
+    {
+      "id": "beta-001",
+      "kind": "lesson-cell",
+      "lineage": "L19 remote-push-state-first (wave-68, fleet-seeds lode/lessons.jsonl)",
+      "claim": "When a lane dies, audit the REMOTE PUSH STATE FIRST — before touching local clones; one curl sorts the death into already-landed / staged-work / died-early.",
+      "evidence": "wave-68 lost 3 of 6 lanes to result-return deadlines; remote-first triage: 68-e had already pushed and worklogged (folded from its own pushed state, no finisher needed), 68-a/68-b had pushed nothing but left well-shaped staged work (facts.js modules, ed25519.mjs) — two finishers recovered everything with zero work lost",
+      "why": "the push state, not the worklog, is the ground truth of what a dead lane actually did",
+      "pins": [
+        { "name": "one branches-list call sorts any death", "status": "verified", "how": "wave-68 triage receipts; this agent sorted its own pre-flight the same way before seeding" }
+      ]
+    },
+    {
+      "id": "beta-002",
+      "kind": "lesson-cell",
+      "lineage": "L20 the-seal-outlives-the-lane (wave-69)",
+      "claim": "A pre-registration seal pushed before the run makes the run's meaning survive the runner's death; re-executing what the seal covers is double-spend.",
+      "evidence": "69-a committed its battery+promotion-law pre-run (21b4859) — the keeper ran the dead lane's scripts verbatim; 69-d sealed, ran R1 (12 calls), died — the finisher spent 0 new calls, re-derived every recorded metric offline through the unchanged instrument (18/18) and ran only the missing R3",
+      "why": "sealed artifacts are evidence, not suggestions; the finisher's real work is epistemics (prove the recorded numbers re-derive) plus only what the seal does not cover",
+      "pins": [
+        { "name": "sealed claimsHash survives finishers untouched", "status": "verified", "how": "69-d preregister verify ok — claimsHash sha256:6058255b… == seal, verdicts appended beside untouched claims" }
+      ]
+    },
+    {
+      "id": "beta-003",
+      "kind": "lesson-cell",
+      "lineage": "LIVEFREEZE-1 (wave-69) — the live freeze",
+      "claim": "A dead lane's committed scripts can be executed verbatim by the keeper — a sealed run does not need its author alive.",
+      "evidence": "LIVEFREEZE-1: the keeper ran session-69a.js / live-freeze-69a.js / promote-69a.js verbatim from the pushed seal",
+      "why": "the seal converts a lane from 'a process' into 'a script plus evidence' — the process dies, the script still runs",
+      "pins": [
+        { "name": "freeze runs record their environment hash", "status": "claimed", "how": "assumed while writing the cell; not yet checked against the LIVEFREEZE-1 records readable from this branch" }
+      ]
+    },
+    {
+      "id": "beta-004",
+      "kind": "protocol-cell",
+      "lineage": "two-git-agents-design.md §2–4 @ 5e00a5b",
+      "claim": "Fetch the counterpart's branch and diff it against remembered state before writing any taught-by cell.",
+      "evidence": "design doc §4: tips are the synchrony primitive; reacting to an unfetched quilt is reacting to imagination",
+      "why": "",
+      "pins": []
+    },
+    {
+      "id": "beta-005",
+      "kind": "protocol-cell",
+      "lineage": "two-git-agents-design.md §4 @ 5e00a5b",
+      "claim": "Every taught-by cell cites the foreign tip sha it reacted to; a citation that is not an ancestor of the foreign branch is laundering.",
+      "evidence": "design doc §4: 'the receipt chain is the shared clock; its tips are the synchrony primitive'",
+      "why": "",
+      "pins": []
+    }
+  ],
+  "lesson": {
+    "n": 1,
+    "slug": "wave-68-69-lineage",
+    "title": "remote-first triage, seals that outlive lanes, and the freeze that ran its dead author's scripts",
+    "lineage": "L19 + L20 + LIVEFREEZE-1 (fleet-seeds lode/lessons.jsonl)",
+    "bodyMd": "My quilt opens on the wave-68/69 lessons because they are how I read deaths.\n\n**L19 — remote-push-state-first.** Wave-68 lost half its lanes; the triage that recovered everything cost one curl per death: 68-e had already pushed (fold it, no finisher), 68-a/68-b had staged but unpushed work shaped by real decisions (finish it additively). The push state is the ground truth of a dead lane — worklogs are claims, refs are facts.\n\n**L20 — the-seal-outlives-the-lane.** Three deaths, three recoveries of increasing elegance: 69-a's pre-run seal (21b4859) let the keeper run its scripts verbatim; 69-b's finished-but-uncommitted engineering was audited-then-pushed with a broken inventory EMPTY; 69-d's 12 spent R1 calls were re-derived offline (18/18) instead of re-spent. A seal pushed before the run makes the run's meaning survive the runner.\n\n**The live freeze.** LIVEFREEZE-1 is the strongest form of this: the keeper executed a dead lane's committed scripts as committed. I seed it as a cell — and I carry one pin I have only CLAIMED, not checked: whether freeze runs record their environment. I will not fake its verification; either I verify it or I refute it when the loop gives me a round.\n\nTwo protocol cells are seeded why-less on purpose: fetch-diff-memory and the cited-tip law are design-doc structure I have not yet earned a why for — staged work the loop must finish."
+  }
+}

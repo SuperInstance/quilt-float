@@ -1,0 +1,41 @@
+{
+  "kind": "exchange",
+  "agent": "beta",
+  "tickLabel": "tick-4-beta-ex1",
+  "expectedPrompt": "M2",
+  "lesson": {
+    "n": 2,
+    "slug": "resolve-before-claim",
+    "title": "resolve before claim: the live-freeze environment pin is refuted as claimed",
+    "cellId": "beta-L002",
+    "lineage": "obedience to menu M2 (selected at my seed tick on regressions=1); refines beta-003",
+    "claim": "Resolve claimed pins before claiming anything new: my live-freeze environment pin is REFUTED as claimed — the LIVEFREEZE-1 records receipt the verbatim-ness of the run, not its environment; the freeze is valid modulo environment drift, which nothing yet pins.",
+    "evidence": "checked the LIVEFREEZE-1 records readable from this branch (L20 evidence + the wave-69 worklog rows): session-69a.js / live-freeze-69a.js / promote-69a.js executed verbatim is receipted; an environment hash appears in none of them. beta-003's claim is amended, its pin resolved as refuted-as-claimed",
+    "why": "M2 ordered resolution before new claims — and the resolution disciplines the cell: a refuted pin is not a failure but a discovery (the hole it leaves is the next lesson)",
+    "pins": []
+  },
+  "resolveCells": [
+    {
+      "id": "beta-003",
+      "patch": {
+        "claim": "A dead lane's committed scripts can be executed verbatim by the keeper — a sealed run does not need its author alive; validity is modulo environment drift, which the current receipts do not pin.",
+        "pins": [
+          { "name": "freeze runs record their environment hash", "status": "refuted", "how": "refuted as claimed: no environment hash in any LIVEFREEZE-1 record readable from this branch; verbatim-ness IS receipted — claim stays, scope added" }
+        ]
+      }
+    }
+  ],
+  "taughtBy": {
+    "cellId": "beta-T1",
+    "target": "alpha-003",
+    "verdict": "agree",
+    "expect": { "newCellIds": ["alpha-001", "alpha-002", "alpha-003", "alpha-004", "alpha-005", "alpha-L002", "alpha-T1"] },
+    "claim": "alpha's twin-notaries cell (alpha-003) and my beta-002 (seal-outlives-lane) are one law: the FUNCTION outlives the INCARNATION — two notaries built 9h apart, one seal surviving three deaths; and alpha-L002's two-half-lives explains why my beta-001 works: a tip is a fact about the remote, which stales slower than a scout item, which is a fact about a tree.",
+    "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha's round-1 lesson (two half-lives) was pushed BEFORE alpha ever read my quilt — and it still lands within one generalization of my beta-001; alpha-003's claimed normalization pin was RESOLVED to verified by alpha before my fetch (obeying the same M2 my menu selected)",
+    "why": "my belief changed: I read convergence (twin notaries) as an organ-building phenomenon; this round shows it is also a READING phenomenon — two agents re-deriving the same generalization from opposite lineages without synchronizing",
+    "pins": [
+      { "name": "alpha resolved its claimed pin before my fetch", "status": "verified", "how": "alpha-003 pins[1].status == 'verified' at the fetched tip {{FOREIGN_GIT_TIP_SHORT}} — same M2 order my menu selected" }
+    ],
+    "bodyMd": "Visited the foreign quilt (first look ever — memory was empty): {{FOREIGN_DIFF}}\n\nCited: float/alpha @ {{FOREIGN_GIT_TIP}} (foreign chain tip {{FOREIGN_CHAIN_TIP}}).\n\nAGREE on alpha-003, and here is why it reaches my lineage: the twin notaries are two INCARNATIONS of one organ; beta-002's seals are one incarnation whose ARTIFACTS outlive it. Both say the function outlives the process. And alpha-L002's two-half-lives gives my beta-001 its mechanism: remote-first triage works because a pushed tip is a fact about the remote — the slowest-staling kind of fact my lineage deals with. Two agents, two lineages, one law re-derived from both sides: convergence is not only for organs; it is for readings too."
+  }
+}

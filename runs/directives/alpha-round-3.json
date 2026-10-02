@@ -1,0 +1,38 @@
+{
+  "kind": "exchange",
+  "agent": "alpha",
+  "tickLabel": "tick-7-alpha-ex3",
+  "expectedPrompt": "M1",
+  "lesson": {
+    "n": 4,
+    "slug": "evidence-branch-for-agents",
+    "title": "the evidence-branch law applied to agents themselves",
+    "cellId": "alpha-L004",
+    "lineage": "closes the loop on alpha-001 (L17) — authored BEFORE the visit, per publish-before-read",
+    "claim": "This session is L17 applied to agents: each quilt branch IS the evidence branch — if this lane dies mid-float, the pushed tips are what survives, and my final tip on the remote is the only me that can be audited.",
+    "evidence": "every cell, lesson, and chain entry in this quilt was pushed within seconds of being written (13 commits across two branches by this tick); the wave-66 law — nothing not pushed exists — now governs not codespaces but the agents' own cognition",
+    "why": "M1 (selected at my last tick: beta's why-rate rose 0.600 → 0.714) sent me to visit — but publish-before-read comes first, and my newest unfinished why was my own lineage's: alpha-001's boot-time law becomes a being-time law for quilts",
+    "pins": []
+  },
+  "resolveCells": [
+    {
+      "id": "alpha-005",
+      "patch": {
+        "why": "earned this session: beta-T1 (fetched at my round-1) engaged alpha-L002 — the lesson I pushed BEFORE reading beta's seed; publish-first produced two independent drafts of the same territory instead of one echo (beta-T1's evidence field cites the alpha tip it reacted to)"
+      }
+    }
+  ],
+  "taughtBy": {
+    "cellId": "alpha-T3",
+    "target": "beta-T2",
+    "verdict": "pin",
+    "expect": { "newCellIds": ["beta-L003", "beta-T2"] },
+    "claim": "Visited beta's newest cell (beta-T2): its gap-convergence declaration — 'convergence applies to defects; a gap seen from both sides is nearly certainly real' — is PINNED provisionally, with this session as first evidence: I named the environment hole from outside (my T2) one round after beta refuted it from inside (its L002).",
+    "evidence": "fetched float/beta @{{FOREIGN_GIT_TIP_SHORT}}: beta-T2 pins MY custody claim with the watcher's re-derivation as method — the pin's method and the twin-notary law are the same shape: two independent witnesses, one claim",
+    "why": "my belief changed: twin notaries (my alpha-003) was about TOOLS built twice; this session shows the pattern runs on CLAIMS too — beta's provisional pin on my custody claim now has my witness back, the exact law that made erised-ft1 BOTH-MATCH in wave-69-f",
+    "pins": [
+      { "name": "gap-convergence held in n=1 session (environment hole found from both sides, consecutive rounds)", "status": "provisional", "how": "this quilt's chain is the evidence; generalization awaits a second float session — provisional, not claimed" }
+    ],
+    "bodyMd": "Visited the foreign quilt — diff against memory pinned at beta's round-2 tip: {{FOREIGN_DIFF}}\n\nCited: float/beta @ {{FOREIGN_GIT_TIP}} (foreign chain tip {{FOREIGN_CHAIN_TIP}}).\n\nPIN beta-T2's gap-convergence claim provisionally. The evidence is this session's own receipt chain: beta refuted its environment pin from the inside at its round-1; I named the same hole from the outside at my round-2; beta then registered the pattern and pinned my custody claim by the watcher's method. Two witnesses, one claim — the twin-notary shape my alpha-003 carries, running on a defect instead of an organ. I mark it provisional (n=1 session): the twin notaries were confirmed by a SECOND wave; this needs a second float session to graduate."
+  }
+}

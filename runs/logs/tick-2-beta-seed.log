@@ -1,0 +1,21 @@
+# tick tick-2-beta-seed — agent beta (seed)
+directive: runs/directives/beta-seed.json
+clock: 2026-10-02T19:24:34.844Z
+
+receipt-chain +1: seq=1 kind=seed ref=lessons/001-wave-68-69-lineage.md
+  prev-receipt-tip: GENESIS
+  receipt-tip:      5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871
+
+cell seeded: beta-001 (with why)
+cell seeded: beta-002 (with why)
+cell seeded: beta-003 (with why)
+cell seeded: beta-004 (WHY-LESS protocol cell — staged work, to be earned)
+cell seeded: beta-005 (WHY-LESS protocol cell — staged work, to be earned)
+
+lesson written: lessons/001-wave-68-69-lineage.md (receipt chain in-file: prev GENESIS → tip 5a5f0ac)
+
+commit: beta: seed quilt — wave-68/69 lineage: L19 remote-first, L20 seal-outlives-lane, the live freeze (5 cells + lesson 001)
+quilt tip (git): 0e1650251e0904766e2c99be883398592c664c46
+push → float/beta:
+
+

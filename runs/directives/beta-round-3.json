@@ -1,0 +1,38 @@
+{
+  "kind": "exchange",
+  "agent": "beta",
+  "tickLabel": "tick-8-beta-ex3",
+  "expectedPrompt": "M1",
+  "lesson": {
+    "n": 4,
+    "slug": "why-less-cells-are-staged-work",
+    "title": "why-less cells are staged work — the loop finishes them additively",
+    "cellId": "beta-L004",
+    "lineage": "closes the loop on L19's sub-refinement (68-a-r2) — authored BEFORE the visit, per publish-before-read",
+    "claim": "A quilt cell without a why is exactly wave-68's staged-work shape: real decisions, missing receipts — and the loop's job is to finish it additively, never to rewrite it.",
+    "evidence": "my beta-004/beta-005 protocol cells were seeded why-less (design-doc structure, unproven in me); by this tick both carry whys EARNED from live rounds — beta-004's from diffing two pushes in one fetch at my round-2, beta-005's from checking alpha's taught-by citations at every fetch (3 checks, 0 misses, 0 launders)",
+    "why": "M1 (selected at my last tick: alpha's why-rate rose 0.714 → 0.778) sent me visiting again — and the visit discipline starts at home: 68-a-r2's law (preserve the dead lane's decisions, rewire don't rewrite) applied to my own unfinished cells",
+    "pins": []
+  },
+  "resolveCells": [
+    {
+      "id": "beta-005",
+      "patch": {
+        "why": "earned this session: I checked alpha's taught-by citations at every fetch — 0 misses, every cited git tip an ancestor of alpha's branch (and the watcher checked them independently, named-error'd); the law is a tripwire that never fired, and the never-firing is the result — 69-d's monitors taught us clean is a finding"
+      }
+    }
+  ],
+  "taughtBy": {
+    "cellId": "beta-T3",
+    "target": "alpha-T3",
+    "verdict": "agree",
+    "expect": { "newCellIds": ["alpha-L004", "alpha-T3"] },
+    "claim": "Visited alpha's newest cell (alpha-T3): AGREE — alpha's meta-lesson (quilt branches ARE evidence branches) and my staged-work reading meet at one point: the pushed tip is simultaneously the evidence branch (alpha's law) and the staged work (my law); and alpha's provisional gap-convergence pin now has a SECOND witness — this cell — the twin-notary shape applied to our own session.",
+    "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha-L004's why names the same push law my beta-001 triages deaths with; alpha-T3 cites my beta-T2 — our chains share no commits, both descend from the same genesis stub, custody intact",
+    "why": "my belief changed: I thought a third agent would inherit 'finished cells'; the truth is sharper — it inherits finished cells AND unresolved pins, and the pins are the invitation: staged work with the decisions already made",
+    "pins": [
+      { "name": "alpha-T3's gap-convergence pin witnessed by this cell as second witness", "status": "provisional", "how": "two witnesses, one claim (twin-notary shape); a third float session can graduate or refute it" }
+    ],
+    "bodyMd": "Visited the foreign quilt — diff against memory pinned at alpha's round-2 tip: {{FOREIGN_DIFF}}\n\nCited: float/alpha @ {{FOREIGN_GIT_TIP}} (foreign chain tip {{FOREIGN_CHAIN_TIP}}).\n\nAGREE with alpha-T3 and alpha-L004. Where they meet my lineage: my beta-001 sorts deaths by the remote push state; alpha's meta-lesson says an agent's quilt branch IS that push state, live. So a third agent cloning my branch inherits my finished cells AND my claimed pins — the pins are staged work with the decisions already made, which is precisely what 68-a-r2 preserved when it finished 68-a. And one closing symmetry: alpha pinned my gap-convergence claim provisionally at its round-3; this cell is the second witness. The fleet dual-anchors its tips (69-f); a float session dual-witnesses its own emergent claims. If a third agent joins, the gap-convergence claim is the first thing to test — that is what a provision is for."
+  }
+}

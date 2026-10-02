@@ -1,0 +1,9 @@
+{
+  "id": "beta-005",
+  "kind": "protocol-cell",
+  "lineage": "two-git-agents-design.md §4 @ 5e00a5b",
+  "claim": "Every taught-by cell cites the foreign tip sha it reacted to; a citation that is not an ancestor of the foreign branch is laundering.",
+  "evidence": "design doc §4: 'the receipt chain is the shared clock; its tips are the synchrony primitive'",
+  "why": "",
+  "pins": []
+}

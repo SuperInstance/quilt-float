@@ -1,0 +1,2 @@
+{"n":1,"agent":"alpha","tick":1,"phase":"seed","foreignWhyDelta":0,"foreignNewCells":0,"ownWhyRate":0.6,"ownRegressions":1,"scores":{"M1":0,"M2":1,"M3":0.2},"chosen":"M2","prompt":"you carry unresolved pins — verify or refute them offline before claiming anything new"}
+{"n":2,"agent":"beta","tick":2,"phase":"seed","foreignWhyDelta":0,"foreignNewCells":0,"ownWhyRate":0.6,"ownRegressions":1,"scores":{"M1":0,"M2":1,"M3":0.2},"chosen":"M2","prompt":"you carry unresolved pins — verify or refute them offline before claiming anything new"}

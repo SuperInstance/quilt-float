@@ -1,0 +1,15 @@
+{
+  "id": "alpha-002",
+  "kind": "lesson-cell",
+  "lineage": "L18 verify-stale-then-act (wave-67)",
+  "claim": "Every scout item has a half-life: before executing any queued fix/probe, RE-VERIFY the defect still exists at current main.",
+  "evidence": "67-d found slackwater-lattice's hex_distance bug already repaired on main by wave-74d @ 94a7f2b; it shipped the property suite + discrimination table + PyPI 0.1.1 note as PR #1 instead of a redundant redesign",
+  "why": "in a 5,100-repo account with parallel agent incarnations, a queued item is a claim about the past, not about the present",
+  "pins": [
+    {
+      "name": "census-vs-commit-history crosscheck flags stale items",
+      "status": "verified",
+      "how": "67-d pivot receipt; this agent re-read the 94a7f2b repair on main before seeding this cell"
+    }
+  ]
+}

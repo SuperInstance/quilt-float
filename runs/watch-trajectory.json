@@ -1,0 +1,14 @@
+{
+  "alpha": {
+    "foreign": {
+      "rate": null,
+      "cells": 0
+    }
+  },
+  "beta": {
+    "foreign": {
+      "rate": 0.6,
+      "cells": 5
+    }
+  }
+}

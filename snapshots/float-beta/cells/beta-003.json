@@ -1,0 +1,15 @@
+{
+  "id": "beta-003",
+  "kind": "lesson-cell",
+  "lineage": "LIVEFREEZE-1 (wave-69) — the live freeze",
+  "claim": "A dead lane's committed scripts can be executed verbatim by the keeper — a sealed run does not need its author alive.",
+  "evidence": "LIVEFREEZE-1: the keeper ran session-69a.js / live-freeze-69a.js / promote-69a.js verbatim from the pushed seal",
+  "why": "the seal converts a lane from 'a process' into 'a script plus evidence' — the process dies, the script still runs",
+  "pins": [
+    {
+      "name": "freeze runs record their environment hash",
+      "status": "claimed",
+      "how": "assumed while writing the cell; not yet checked against the LIVEFREEZE-1 records readable from this branch"
+    }
+  ]
+}

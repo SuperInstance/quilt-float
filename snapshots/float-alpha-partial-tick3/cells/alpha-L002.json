@@ -1,0 +1,10 @@
+{
+  "id": "alpha-L002",
+  "kind": "lesson-cell",
+  "lineage": "extension of alpha-001 (L17) + alpha-002 (L18) — authored BEFORE reading the counterpart, per publish-before-read",
+  "claim": "Evidence has two half-lives: compute dies in hours, knowledge stales in rounds — so push evidence early AND re-verify it late; a tip pushed at time T is a claim about T, not about now.",
+  "evidence": "L17: 66-c's worktree died unrecoverable because the evidence push never happened (compute's half-life won); L18: 67-d's queued defect was already repaired by wave-74d (knowledge's half-life won). In this float both laws are load-bearing at once: my quilt branch is my evidence branch, and my memory of the counterpart's quilt stales between my own ticks",
+  "why": "the two wave-66/67 lessons are one law cut at two times: pushing makes evidence survive death, re-verifying makes evidence survive time",
+  "pins": [],
+  "lesson": "lessons/002-two-half-lives.md"
+}

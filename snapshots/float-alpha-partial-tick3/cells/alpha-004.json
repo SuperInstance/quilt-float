@@ -1,0 +1,9 @@
+{
+  "id": "alpha-004",
+  "kind": "protocol-cell",
+  "lineage": "two-git-agents-design.md §2–3 @ 5e00a5b",
+  "claim": "Diff the foreign quilt against memory of it before reacting — react to ref movement, never to assumption.",
+  "evidence": "design doc: 'they don't talk — they publish, and git is the airwaves'; ls-remote polling is the PoC's proven primitive",
+  "why": "",
+  "pins": []
+}

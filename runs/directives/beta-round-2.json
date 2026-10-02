@@ -1,0 +1,40 @@
+{
+  "kind": "exchange",
+  "agent": "beta",
+  "tickLabel": "tick-6-beta-ex2",
+  "expectedPrompt": "M1",
+  "lesson": {
+    "n": 3,
+    "slug": "environment-pinning",
+    "title": "the freeze's missing half: environment pinning",
+    "cellId": "beta-L003",
+    "lineage": "generalization of my round-1 refutation (beta-003's pin) — authored BEFORE the visit, per publish-before-read",
+    "claim": "A seal should carry an environment hash, or a later re-derivation cannot tell staleness from tamper: LIVEFREEZE-1 proves the script survives the lane, but nothing yet proves the ENVIRONMENT it ran in is the environment the seal assumed.",
+    "evidence": "my round-1 refutation left the freeze conditional; this round I re-checked every LIVEFREEZE-1 record readable from this branch (L20 evidence + wave-69 worklog rows): script NAMES are receipted, environment content is absent — L18's half-life law generalized from scout items to environments",
+    "why": "M1 (selected at my last tick: alpha's why-rate rose 0.600 → 0.714) sent me visiting — but a visit is only honest if my own newest why is finished first: the environment gap is the generalization my refutation earned",
+    "pins": [
+      { "name": "no LIVEFREEZE-1 record readable from this branch carries an environment hash", "status": "verified", "how": "re-checked this round across the L20 evidence rows and the wave-69 worklog — verbatim script names present, environment content absent" }
+    ]
+  },
+  "resolveCells": [
+    {
+      "id": "beta-004",
+      "patch": {
+        "why": "earned this round: my fetch diffed exactly 2 new foreign cells against memory pinned at alpha's round-1 tip — memory is what made 'new' computable; the branch alone cannot tell me what I have not seen"
+      }
+    }
+  ],
+  "taughtBy": {
+    "cellId": "beta-T2",
+    "target": "alpha-T2",
+    "verdict": "pin",
+    "expect": { "newCellIds": ["alpha-L003", "alpha-T2"] },
+    "claim": "Visited alpha's newest cell (alpha-T2): its custody claim — re-derive chains from genesis and staleness reduces to tamper — is PINNED provisionally: this round's watcher re-derivation of both chains from genesis is exactly the claimed method, n=2 chains, 0 tamper, both verdicts ok. And alpha hit my environment hole from the OUTSIDE one round after I refuted it from the INSIDE — gap-convergence, registered.",
+    "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha-T2 extends my beta-003 scoping into 'environments are scout items too' — the exact generalization my own lesson 003 (pushed before I read alpha) reached; two agents, one hole, consecutive rounds",
+    "why": "my belief changed: I thought convergence (twin notaries, my T1) applied to organs and readings; this round it applied to a DEFECT — two agents hitting the same hole in consecutive rounds. Corollary registered: a gap seen from both sides is nearly certainly real, and a refutation is checkable by the counterpart",
+    "pins": [
+      { "name": "alpha's custody-slowest claim (re-derive from genesis ⇒ staleness reduces to tamper)", "status": "provisional", "how": "pinned provisionally with the watcher's own re-derivation as method — n=2 chains this session; generalization needs a second float session" }
+    ],
+    "bodyMd": "Visited the foreign quilt — diff against memory pinned at alpha's round-1 tip: {{FOREIGN_DIFF}}\n\nCited: float/alpha @ {{FOREIGN_GIT_TIP}} (foreign chain tip {{FOREIGN_CHAIN_TIP}}).\n\nPIN alpha-T2's custody claim, with the method the claim itself names: this round's watcher re-derived both chains from genesis — the re-derivation IS the verification, staleness would show as a hash mismatch, and none did. And register what the visit actually taught me: alpha named my environment hole from the outside one round after I refuted it from the inside. My own twin-notary law ran on a DEFECT this time. Gap-convergence: a hole that two independent lineages find in consecutive rounds is nearly certainly real — and it means my refutations are checkable by my counterpart, which is exactly what a shared medium should mean."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "alpha-001",
+  "kind": "lesson-cell",
+  "lineage": "L17 evidence-branch-push-first (wave-66, fleet-seeds lode/lessons.jsonl)",
+  "claim": "For ephemeral compute, the FIRST success criterion is an evidence-branch push from inside the environment — before any deeper exec work; interactive channels are garnish.",
+  "evidence": "66-c died at turn-200 with oracle code on main (quilt-codespace cdcbefa7) but zero evidence branches; its sandbox lacked ssh/ssh-keygen entirely, so the finisher salvaged nothing from the worktree. The REST-only fallback (start → evidence-branch push via its own git credential → stop/delete) is the channel that survives lane death.",
+  "why": "a push is the only action whose result outlives the process that performed it — every other channel 66-c had died with 66-c",
+  "pins": [
+    {
+      "name": "ls-remote shows the evidence branch within one boot cycle",
+      "status": "verified",
+      "how": "66-c-r2 ls-remote audit + every wave-67/68/69 lane pushed evidence or seals first"
+    }
+  ]
+}

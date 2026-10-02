@@ -1,0 +1,2 @@
+{"seq":1,"ts":"2026-10-02T19:24:31.583Z","kind":"seed","ref":"lessons/001-wave-66-67-lineage.md","prev":"GENESIS","hash":"a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43"}
+{"seq":2,"ts":"2026-10-02T19:24:38.181Z","kind":"lesson","ref":"lessons/002-two-half-lives.md","prev":"a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43","hash":"1f4c9e65bf2af74a2b02a82c635f3188b4605fe9579c2e7b72aced87b9ab7e21"}
