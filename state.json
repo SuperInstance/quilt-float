@@ -1,19 +1,25 @@
 {
   "agent": "alpha",
   "branch": "float/alpha",
-  "chainTip": "861ba68eb0c252fdf6b336e703c0f67dadd93ab287959f6fa0b67f49841a1287",
-  "cells": 12,
-  "whys": 12,
+  "chainTip": "00cc8d85659fb68ccfe41f3e88868992ade0b16f8f132a97a2a20ed9af597226",
+  "cells": 13,
+  "whys": 13,
   "whyRate": 1,
   "regressions": 0,
   "lessons": 5,
   "foreign": {
     "beta": {
-      "gitTip": "55c57dd886ebffe5ebe102f8bcf4af303f917985",
-      "chainTip": "ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09",
-      "cells": 9,
-      "whyRate": 0.8889
+      "gitTip": "7273610009c97cbeb15e441198eedce29c5f8df4",
+      "chainTip": "174e5b01560a5a8c8b07e04e58258a62de61e07e961b4d4da1f1a57b4122983f",
+      "cells": 11,
+      "whyRate": 1
+    },
+    "gamma": {
+      "gitTip": "8d90b9976dc7b31d04db019b733fa3f1dd61c6d5",
+      "chainTip": "551ec9434a39600b0f57d815530c06a261cfafd1559919c7f40f835a0f571d0b",
+      "cells": 5,
+      "whyRate": 0.8
     }
   },
-  "updatedAt": "2026-10-02T22:10:08.221Z"
+  "updatedAt": "2026-10-02T22:10:11.470Z"
 }

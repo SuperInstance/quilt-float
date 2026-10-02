@@ -1,17 +1,36 @@
 {
-  "gitTip": "55c57dd886ebffe5ebe102f8bcf4af303f917985",
-  "chainTip": "ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09",
-  "cellsSeen": {
-    "beta-001": "6bb416e610d0ce355731efae49b77493aa6dca1f36e8c9815403286f6c0ae608",
-    "beta-002": "885c8daa3e19ae92d351eced32fd8729adf75c904405814e27dea5a85d9a5a9f",
-    "beta-003": "975daa94ba8f0accf9a11cf265d93d3383dbd1da62d5a80affff29c03a88e9b6",
-    "beta-004": "4ba49b409f599703a83ab65978e5db392b469c94f53600eadfcbc83b0e2911d4",
-    "beta-005": "4cd5fcf8186c416f967ac2766c11a01374653f9f93dc3d6dabffb77e346238eb",
-    "beta-L002": "094d7d159e5572ed30aeb97b1080c72611841ccba2dba6b0f0a6845726c42934",
-    "beta-L003": "210a46c93957bf73396caf9a565ee922de80564e58390fc026b6ee5b3787bd50",
-    "beta-T1": "9110649f5fa958d3bd8cf3f586c55f429eb48bf3f2a53290f0584ab572b66009",
-    "beta-T2": "4e70215f518d466e3d9a244af50b4f1d44f5cea86e3f66e466e67e9a3aaaecd7"
-  },
-  "cells": 9,
-  "whyRate": 0.8889
+  "peers": {
+    "beta": {
+      "gitTip": "7273610009c97cbeb15e441198eedce29c5f8df4",
+      "chainTip": "174e5b01560a5a8c8b07e04e58258a62de61e07e961b4d4da1f1a57b4122983f",
+      "cellsSeen": {
+        "beta-001": "6bb416e610d0ce355731efae49b77493aa6dca1f36e8c9815403286f6c0ae608",
+        "beta-002": "885c8daa3e19ae92d351eced32fd8729adf75c904405814e27dea5a85d9a5a9f",
+        "beta-003": "975daa94ba8f0accf9a11cf265d93d3383dbd1da62d5a80affff29c03a88e9b6",
+        "beta-004": "4ba49b409f599703a83ab65978e5db392b469c94f53600eadfcbc83b0e2911d4",
+        "beta-005": "b27665e16c3cfe4b01669bcfbbcb52a6608a8939522337531a44fb4f4f4ae484",
+        "beta-L002": "094d7d159e5572ed30aeb97b1080c72611841ccba2dba6b0f0a6845726c42934",
+        "beta-L003": "210a46c93957bf73396caf9a565ee922de80564e58390fc026b6ee5b3787bd50",
+        "beta-L004": "b69f644a7aa0d1c241a9786e5c0c72cb2dcb7a571ac4e6949cafb33120f975d2",
+        "beta-T1": "9110649f5fa958d3bd8cf3f586c55f429eb48bf3f2a53290f0584ab572b66009",
+        "beta-T2": "4e70215f518d466e3d9a244af50b4f1d44f5cea86e3f66e466e67e9a3aaaecd7",
+        "beta-T3": "9e161675bcb1610d70eec15da1635a1f7a11068ec665769e51d49254961e5bc4"
+      },
+      "cells": 11,
+      "whyRate": 1
+    },
+    "gamma": {
+      "gitTip": "8d90b9976dc7b31d04db019b733fa3f1dd61c6d5",
+      "chainTip": "551ec9434a39600b0f57d815530c06a261cfafd1559919c7f40f835a0f571d0b",
+      "cellsSeen": {
+        "gamma-001": "b927b8fa7f474f34c0eb74ea82f2bff87fd7a0bc5d33e8055b89ca3d4c0b8270",
+        "gamma-002": "bbe398e99343aa09f90e635600cfba125d30a7a9b02503b4eb936ab9abdc7b96",
+        "gamma-003": "f7d78a0d2e6539cd5bc217ed39c446c5be9e6c1fd77d16282f20f6cbef566ee2",
+        "gamma-004": "590f2c55fd224bba968469683d4a0d4b3bf4b7de3d603e8bc359fb0d901f6f63",
+        "gamma-005": "f181d38b8488af731977e8c8c9f1bb110dd04bec4417bd2bc24654ffac766257"
+      },
+      "cells": 5,
+      "whyRate": 0.8
+    }
+  }
 }

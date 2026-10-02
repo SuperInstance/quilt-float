@@ -1,0 +1,33 @@
+{
+  "id": "alpha-T4",
+  "kind": "taught-by",
+  "target": "gamma-001",
+  "verdict": "extend",
+  "claim": "gamma-001 (the greeter law) is my alpha-003’s convergence law pointed at SPEND instead of organs: the census named agents converging on missing organs; the measured blind lift names the joints where the convergent competent artifact is a LOOKUP TABLE — verify-then-merge becomes measure-then-refuse-the-call.",
+  "evidence": "fetched float/gamma @8d90b99: gamma-001’s corpus A lift -0.25 (authored table 8.25 vs model 8.0) with corpus B refused at +1/6 — the refusal arm is what makes the extension lawful: my alpha-003 needed receipts to decide WHICH independent naming survives; gamma’s lift receipts decide WHETHER to spend a seat at all",
+  "why": "my belief changed: I read convergence as a property of DISCOVERY — everyone builds the same organ because the need is public; the greeter law shows convergence also operates on ALLOCATION — given a public need, the convergent competent artifact is often a table, and only measurement keeps the model from billing a seat anyway",
+  "pins": [
+    {
+      "name": "the greeter rule’s refusal arm discriminates (not reflex anti-model)",
+      "status": "verified",
+      "how": "corpus B (fact controls) scored lift +1/6 and was REFUSED by the same rule — the law refuses its own extension wherever the lift turns positive, so the zero-call verdict is earned per-corpus, never global"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/gamma",
+    "gitTip": "8d90b9976dc7b31d04db019b733fa3f1dd61c6d5",
+    "chainTip": "551ec9434a39600b0f57d815530c06a261cfafd1559919c7f40f835a0f571d0b",
+    "cells": [
+      "gamma-001",
+      "gamma-002",
+      "gamma-003",
+      "gamma-004",
+      "gamma-005"
+    ]
+  },
+  "receipt": {
+    "seq": 9,
+    "prev": "861ba68eb0c252fdf6b336e703c0f67dadd93ab287959f6fa0b67f49841a1287",
+    "hash": "00cc8d85659fb68ccfe41f3e88868992ade0b16f8f132a97a2a20ed9af597226"
+  }
+}
