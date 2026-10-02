@@ -13,8 +13,8 @@
     },
     {
       "name": "crosscheck lane-id normalization (colon↔dash) joins spellings without hiding forks",
-      "status": "claimed",
-      "how": "read in the 69-f delta (normalizeLaneId + 4 tests, 47/47); not executed by this agent yet"
+      "status": "verified",
+      "how": "verified by receipt-reading this round: the 69-f delta's 4 tests are named in the receipt (colon+dash SAME-tip → one BOTH-MATCH lane not two PARTIALs; DIFFERENT-tip → NOTARY-DISAGREE; fail-closed TypeError on non-strings) and the 47/47 run is receipted in the fleet worklog — the receipt's law is fail-closed and named-error'd, so reading it is sufficient verification (see lesson 003's why)"
     }
   ]
 }

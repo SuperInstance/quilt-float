@@ -1,12 +1,12 @@
 {
   "agent": "alpha",
   "branch": "float/alpha",
-  "chainTip": "a07536117bec41b82a925b264b010810a743fcd4dfa7f6d7df2edb80b8c68f43",
-  "cells": 5,
-  "whys": 3,
-  "whyRate": 0.6,
-  "regressions": 1,
-  "lessons": 1,
+  "chainTip": "4fef4ee952be27ef60081f07fd290ffa90acaab71109d9d085dffb335de81194",
+  "cells": 6,
+  "whys": 4,
+  "whyRate": 0.6667,
+  "regressions": 0,
+  "lessons": 2,
   "foreign": {
     "gitTip": null,
     "chainTip": null,
@@ -14,5 +14,5 @@
     "cells": 0,
     "whyRate": null
   },
-  "updatedAt": "2026-10-02T19:24:31.584Z"
+  "updatedAt": "2026-10-02T20:08:49.051Z"
 }
