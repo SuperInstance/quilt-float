@@ -65,6 +65,32 @@ for (const f of fs.readdirSync(DIRECTIVES).filter(f => f.endsWith('.json')).sort
   ok(r.ok === true, `${f} passes${r.ok ? '' : ` — ${r.detail}`}`);
 }
 
+console.log('# 7. the fleet roster: gamma validates, unknown agents refuse with the roster named');
+const gseed = JSON.parse(fs.readFileSync(path.join(DIRECTIVES, 'gamma-seed.json'), 'utf8'));
+const gex = JSON.parse(fs.readFileSync(path.join(DIRECTIVES, 'gamma-round-1.json'), 'utf8'));
+ok(validateDirective(clone(gseed)).ok === true, 'gamma seed directive passes (roster admits gamma)');
+ok(validateDirective(clone(gex)).ok === true, 'gamma exchange directive passes');
+const rogue = clone(gseed);
+rogue.agent = 'delta';
+const r7 = validateDirective(rogue);
+ok(r7.ok === false && /expected one of alpha \| beta \| gamma/.test(r7.detail), `unknown agent refused, roster named (got: ${r7.detail})`);
+
+console.log('# 8. taughtBy.peer binds the citation to a branch: self-citation and off-roster refuse');
+const selfCite = clone(gex);
+selfCite.taughtBy.peer = 'gamma';
+const r8a = validateDirective(selfCite);
+ok(r8a.ok === false && /cannot cite its own branch/.test(r8a.detail), 'taughtBy.peer = self refused');
+const roguePeer = clone(gex);
+roguePeer.taughtBy.peer = 'delta';
+const r8b = validateDirective(roguePeer);
+ok(r8b.ok === false && /bad field: taughtBy\.peer/.test(r8b.detail), `off-roster peer refused (got: ${r8b.detail})`);
+
+console.log('# 9. the blind law is fleet-wide: per-peer placeholders refuse in lessons too');
+const blindPeer = clone(gex);
+blindPeer.lesson.bodyMd = 'after the fetch I saw {{BETA_GIT_TIP}} ...';
+const r9 = validateDirective(blindPeer);
+ok(r9.ok === false && /lesson\.bodyMd/.test(r9.detail), 'lesson with a per-peer {{BETA_*}} placeholder refused (time-travel is time-travel in any namespace)');
+
 console.log('# 6. end-to-end: agent.mjs refuses pre-tick, BEFORE any mutation');
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'float-schema-test-'));
 const badFile = path.join(tmp, 'bad-directive.json');

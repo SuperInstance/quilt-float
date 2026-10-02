@@ -15,6 +15,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
+// ---------- 0. the fleet roster (the third-agent generalization, session 3) ----------
+// ONE roster, imported by agent.mjs and float-watch.mjs: a new agent joins the float by
+// being added HERE plus seeding its branch — never by forking the instrument. Order
+// matters for legacy migration only: the pre-fleet sessions had exactly two agents, so
+// counterpartsOf(agent)[0] is the legacy single counterpart for alpha/beta.
+export const AGENTS = ['alpha', 'beta', 'gamma'];
+export const counterpartsOf = (agent) => AGENTS.filter(a => a !== agent);
+
 export const sha256 = (s) => createHash('sha256').update(s, 'utf8').digest('hex');
 export const nowIso = () => new Date().toISOString();
 export const RATE = (r) => Math.round(r * 10000) / 10000;
@@ -115,8 +123,8 @@ export function validateDirective(d) {
   if (d.kind !== 'seed' && d.kind !== 'exchange') {
     bad('kind', `expected 'seed' | 'exchange', got ${JSON.stringify(d.kind)}`);
   }
-  if (d.agent !== 'alpha' && d.agent !== 'beta') {
-    bad('agent', `expected 'alpha' | 'beta', got ${JSON.stringify(d.agent)}`);
+  if (!AGENTS.includes(d.agent)) {
+    bad('agent', `expected one of ${AGENTS.join(' | ')}, got ${JSON.stringify(d.agent)}`);
   }
   if (!isStr(d.tickLabel)) miss('tickLabel');
   const les = d.lesson;
@@ -140,10 +148,12 @@ export function validateDirective(d) {
     if (les.bodyMd !== undefined && !isStr(les.bodyMd)) bad('lesson.bodyMd', 'must be a non-empty string');
     if (les.pins !== undefined && !Array.isArray(les.pins)) bad('lesson.pins', 'must be an array');
     // publish-before-read is a schema law too: the lesson is authored BLIND (it pushes before
-    // the (c) fetch), so a foreign placeholder in ANY lesson string is time-travel — refuse it
+    // the (c) fetch), so a placeholder in ANY lesson string is time-travel — refuse it.
+    // Fleet-general: per-peer namespaces ({{ALPHA_*}}, {{BETA_*}}, {{GAMMA_*}}, …) are
+    // taughtBy-only exactly like the legacy {{FOREIGN_*}} aliases.
     for (const [f, v] of Object.entries(les)) {
-      if (typeof v === 'string' && /\{\{FOREIGN_/.test(v)) {
-        bad(`lesson.${f}`, 'a lesson is authored blind (publish-before-read); {{FOREIGN_*}} placeholders are taughtBy-only');
+      if (typeof v === 'string' && /\{\{[A-Z][A-Z0-9]*_/.test(v)) {
+        bad(`lesson.${f}`, 'a lesson is authored blind (publish-before-read); placeholder namespaces are taughtBy-only');
       }
     }
   }
@@ -167,6 +177,15 @@ export function validateDirective(d) {
         miss('taughtBy.expect.newCellIds');
       }
       if (tb.pins !== undefined && !Array.isArray(tb.pins)) bad('taughtBy.pins', 'must be an array');
+      // the taught-by binds to ONE branch (citations must name the branch they cite):
+      // `peer` names it explicitly; legacy two-agent directives omit it and agent.mjs
+      // resolves the single counterpart — with a fleet, omission is ambiguous and will
+      // fail-closed in agent.mjs (E_TAUGHTBY_PEER_REQUIRED), never guess.
+      if (tb.peer !== undefined) {
+        if (!isStr(tb.peer)) bad('taughtBy.peer', 'must be a non-empty string');
+        else if (!AGENTS.includes(tb.peer)) bad('taughtBy.peer', `expected one of ${AGENTS.join(' | ')}, got ${tb.peer}`);
+        else if (tb.peer === d.agent) bad('taughtBy.peer', 'a taught-by cannot cite its own branch');
+      }
     }
   }
   if (d.resolveCells !== undefined) {

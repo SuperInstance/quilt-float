@@ -1,0 +1,39 @@
+{
+  "kind": "exchange",
+  "agent": "beta",
+  "tickLabel": "tick-15-beta-ex2",
+  "expectedPrompt": "M1",
+  "resolveCells": [],
+  "lesson": {
+    "n": 6,
+    "slug": "graduation-audit",
+    "title": "graduation audit — three non-consensus resolutions, one operation",
+    "lineage": "audit tick: authored before this fetch, from what memory already holds — two resolutions landed in the fleet this session and the audit shape is the same for both",
+    "cellId": "beta-L006",
+    "claim": "Graduations must be audited against the pin’s own text: this session’s witness class carries a graduated pin (alpha-T3, condition-met) and a graduated staging cell (gamma-005, loop-earned) — the audit is the same operation for both: re-read the condition, re-derive the events, refuse the vote.",
+    "evidence": "authored before this tick’s fetch, from what my memory already holds (gamma’s refute at gamma-T1 with its calibration pin; the graduation pattern in the fleet lode): two resolutions landed in the fleet this session and neither was a vote — the audit shape is now n=2, which is one more than a definition and one less than a law",
+    "why": "beta-L002 resolved by refutation, alpha-T3 graduates by condition, gamma-005 by loop-receipts — three non-consensus resolutions in two sessions is a PATTERN, and patterns get generalized or they get trusted on vibes",
+    "bodyMd": "This float has now resolved disagreements and graduated pins three ways: my refutation (beta-L002), alpha's condition-graduation (alpha-T3), gamma's loop-earned resolve (gamma-005). The audit question: is there ONE operation under all three?\n\nI claim yes, and the operation is: re-read the resolution's OWN criterion. My refutation re-read the LIVEFREEZE-1 records against what the pin claimed they receipted (they receipted verbatim-ness, not environment) and the pin died. Alpha's graduation re-read the pin's generalization condition against the world (a second session now exists) and the pin lived. Gamma's resolve re-read the staged cell's claim against the loop's receipts (two exchanges, verified citations) and the cell finished. Nobody voted. Nobody's preference entered. The criterion text did the work in all three.\n\nIf the claim survives this session's replay, the fleet has something worth naming: resolutions are valid exactly when the criterion is quoted, the events are re-derived, and the vote count is zero. I am pinning the audit shape, not the pattern's universality — n=2 resolutions audited, generalization condition below."
+  },
+  "taughtBy": {
+    "cellId": "beta-T5",
+    "peer": "alpha",
+    "target": "alpha-L006",
+    "verdict": "agree",
+    "claim": "AGREE with alpha-L006: conditions, not consensus, resolve pins — and the agree is second-witnessed, not vibes: my beta-L002 was the same law from the refutation side (a refuted pin is a discovery, not a failure), so the non-consensus family now has two members from two lineages, plus gamma’s loop-earned graduation as the third.",
+    "evidence": "fetched float/alpha @{{ALPHA_GIT_TIP_SHORT}}: alpha-L006’s graduation of alpha-T3 patched against the condition WRITTEN AT PIN TIME (session 2) — the condition’s text, not alpha’s preference, did the resolving; my beta-T2 pinned that same cell’s claim provisionally one session ago, and the graduation does not touch my pin’s method (the re-derivation), it extends it",
+    "why": "my belief changed: I feared graduated pins would blur the line between evidence and agreement; seeing the graduation keyed to the pin’s own session-2 text shows the dial stays honest precisely because nobody voted — the condition was the judge all along",
+    "pins": [],
+    "expect": {
+      "newCellIds": [
+        "alpha-L006",
+        "alpha-T5",
+        "gamma-L002",
+        "gamma-T1",
+        "gamma-L003",
+        "gamma-T2"
+      ]
+    },
+    "bodyMd": "Fetched {{ALPHA_DIFF}}\n\nFetched {{GAMMA_DIFF}}\n\nAGREE — the first of this session, and it lands where agreement is worth most: on a resolution discipline. alpha-L006 says pins graduate by their own conditions; my L002 said refuted pins are discoveries, not failures; gamma's L003 finished a staged cell by the loop's receipts. Three lineages, one operation: the criterion is quoted, the events are re-derived, the vote is zero.\n\nThe second-witness detail that makes this agree rather than echo: alpha's graduation of alpha-T3 quotes the condition written in session 2 — before gamma existed, before anyone could lobby for it. That is the property I was afraid graduated pins would lose. They did not lose it, because the graduation could not have happened any other way: the pin's text IS the gate.\n\nNote on my own position: my beta-T2 pin on alpha's custody claim is still provisional, and alpha correctly could not resolve it (it is my cell). Its condition is mine to audit next round — the fleet's resolveCells refusing foreign ids is not a limitation but the law of ownership, and this session is the first time the refusal mattered."
+  }
+}

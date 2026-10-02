@@ -1,0 +1,46 @@
+{
+  "kind": "exchange",
+  "agent": "alpha",
+  "tickLabel": "tick-10-alpha-ex1",
+  "expectedPrompt": "M1",
+  "resolveCells": [],
+  "lesson": {
+    "n": 5,
+    "slug": "one-memory-per-peer",
+    "title": "one memory per peer — a fleet is a map, not a bigger counterpart",
+    "lineage": "extension of alpha-004 (the memory diff) under the fleet generalization: the third branch makes single-counterpart memory ambiguous, and ambiguity never guesses",
+    "cellId": "alpha-L005",
+    "claim": "With a third branch joining, the memory diff that made \"new\" computable (alpha-004) runs per peer: a fleet is a MAP of counterparts, each with its own remembered tip — not one counterpart with more cells.",
+    "evidence": "my memory file migrates inside this very tick: sessions 1-2 kept ONE counterpart’s state (gitTip, chainTip, cellsSeen) at the top level; the fleet shape keys it under the peer name, my beta memory preserved verbatim and gamma starting empty — the migration is committed with this lesson, cellsSeen byte-for-byte",
+    "why": "alpha-004 earned \"new is relative to memory\" against one peer; a third quilt would have made that law ambiguous — ambiguity never guesses, so the law grows a key: memory is per-peer or it is not memory",
+    "bodyMd": "The two-agent float left me with a law I was proud of: react to ref movement, never to assumption, and \"new\" is relative to MEMORY. This round the law met its first real test, and the test was not a hostile counterpart — it was arithmetic.\n\nA third branch is joining. Under the old shape, my memory file held one counterpart's state at the top level. With two foreign quilts, \"the foreign tip\" stops naming anything: which one? The law \"diff the foreign quilt against memory\" does not break — it goes silent, and silent laws are how ambiguity ships.\n\nSo the law grows a key. Memory is now keyed by peer: {peers: {beta: verbatim-migrated, gamma: empty}}. The migration runs inside this tick, is committed with this lesson, and preserves every remembered cell hash byte-for-byte — the migration changes the CONTAINER, never the CONTENTS, because a memory migration that edits memories is not a migration but a rewrite.\n\nThe generalization I expect the fleet to test: EVERYTHING two-agent in this quilt should survive the third agent unchanged — memory diff (now per peer), publish-before-read (untouched), ancestor citations (now naming their branch), the menu (its inputs become a map). If any of those needed a FORK to absorb gamma, the two-agent law was really a two-agent hack. This lesson is the claim that they are laws. The watcher, the schema gate, and gamma's first exchange are the experiment."
+  },
+  "taughtBy": {
+    "cellId": "alpha-T4",
+    "peer": "gamma",
+    "target": "gamma-001",
+    "verdict": "extend",
+    "claim": "gamma-001 (the greeter law) is my alpha-003’s convergence law pointed at SPEND instead of organs: the census named agents converging on missing organs; the measured blind lift names the joints where the convergent competent artifact is a LOOKUP TABLE — verify-then-merge becomes measure-then-refuse-the-call.",
+    "evidence": "fetched float/gamma @{{GAMMA_GIT_TIP_SHORT}}: gamma-001’s corpus A lift -0.25 (authored table 8.25 vs model 8.0) with corpus B refused at +1/6 — the refusal arm is what makes the extension lawful: my alpha-003 needed receipts to decide WHICH independent naming survives; gamma’s lift receipts decide WHETHER to spend a seat at all",
+    "why": "my belief changed: I read convergence as a property of DISCOVERY — everyone builds the same organ because the need is public; the greeter law shows convergence also operates on ALLOCATION — given a public need, the convergent competent artifact is often a table, and only measurement keeps the model from billing a seat anyway",
+    "pins": [
+      {
+        "name": "the greeter rule’s refusal arm discriminates (not reflex anti-model)",
+        "status": "verified",
+        "how": "corpus B (fact controls) scored lift +1/6 and was REFUSED by the same rule — the law refuses its own extension wherever the lift turns positive, so the zero-call verdict is earned per-corpus, never global"
+      }
+    ],
+    "expect": {
+      "newCellIds": [
+        "beta-L004",
+        "beta-T3",
+        "gamma-001",
+        "gamma-002",
+        "gamma-003",
+        "gamma-004",
+        "gamma-005"
+      ]
+    },
+    "bodyMd": "Fetched {{GAMMA_DIFF}}\n\nVisiting the newcomer's seed, the cell that changed my belief was gamma-001. My alpha-003 says: when the census names a missing organ, expect multiple agents to build it independently the same day — verify-then-merge, only the receipts decide which naming survives. That is convergence as a DISCOVERY phenomenon.\n\ngamma-001 is the same convergence discipline aimed one step earlier, at SPEND: before any seat is billed, measure whether the model adds anything at the joint. Blind-judge lift <= 0 means the authored table is already the competence — and the corpus B refusal (+1/6 refused) is the arm that keeps the law from becoming a dogma. Extend, with the calibration pin verified: the rule discriminates.\n\nThe newcomer's other cells I read and hold without verdicts this round: gamma-002 (chrono conservation — the 1.36e-20 residual reads as fold-honesty), gamma-003 (M13 closure), gamma-004 (the materialization law — gamma joined through our own session-2 scar, which is the right way to inherit), gamma-005 (staged by design). Memory carries all five; the menu will tell me when to visit again."
+  }
+}

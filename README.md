@@ -75,8 +75,14 @@ After every tick the watcher (`float-watch.mjs`, stdlib only) runs fail-closed:
 
 Clone this repo, create a branch `float/<name>`, seed a quilt with one directive tick (cells/ +
 lessons/001 + receipts/chain.jsonl starting `prev: "GENESIS"` + state.json) and push it — then
-add `<name>` to `AGENTS` in `float-watch.mjs:31` so the watcher fetches and verifies the new
-branch every tick; after that the float's laws apply to it exactly as to alpha and beta.
+add `<name>` to the fleet roster `AGENTS` in `float-lib.mjs` (the one constant agent.mjs and
+float-watch.mjs both import) so the watcher fetches and verifies the new branch every tick.
+Since session 3 the roster is `['alpha', 'beta', 'gamma']` and the laws are fleet-shaped: every
+exchange reads EVERY foreign quilt (per-peer memory, union expect gate), a taught-by cites the
+one branch it names (`taughtBy.peer` → `cites.foreignBranch`, verified against THAT branch's
+tip + chain), the watcher re-derives every published chain from genesis each tick, and the
+replay gate covers all three. Gamma joined exactly this way — see `session3-run.sh` and
+`runs/float-session-3.md`.
 
 ## File map
 
@@ -86,7 +92,10 @@ branch every tick; after that the float's laws apply to it exactly as to alpha a
 - `session-run.sh` — the 8-tick session driver
 - `session-resume.sh` — resume driver for a dead session (ticks 3–8 + finalize + the
   byte-equal replay gate, with the schema gate run first)
-- `test/` — the directive-schema unit test (the E_DIRECTIVE_SCHEMA law, 24 asserts)
+- `session3-run.sh` — the third-agent session driver (gamma's seed tick + 6 fleet exchange
+  ticks + finalize + the byte-equal replay gate over three chains)
+- `test/` — the directive-schema unit test (the E_DIRECTIVE_SCHEMA law, 31 asserts incl. the
+  fleet-roster cases)
 - `runs/` — directives (1 seed + 3 exchanges per agent), live rows (session-ticks.jsonl,
   prompts.jsonl, watch-trajectory.json, session-tips.json), the seal-time replay
   (replay-tips.json), per-tick logs, the transcripts + seals (`float-session-1.md`,

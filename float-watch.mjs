@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 // float-watch.mjs — the ML leg + the organ law of the float. stdlib only.
 //
-// tick     — after every agent tick: FETCH both branches (git is the only observation
-//            surface), verify BOTH receipt chains from genesis (fail-closed: a broken
-//            chain halts the float), cross-check lesson citations, taught-by citations
-//            (cited foreign git tip must be an ancestor of the foreign branch; cited
-//            foreign chain tip must exist in the foreign chain — no laundering foreign
-//            claims), cross-check state.json dials, then compute WHY-RATE + pin
-//            regressions for both quilts and SELECT the next exchange prompt from the
-//            fixed menu by simple scoring (the ML selection is receipted, never silent).
+// tick     — after every agent tick: FETCH every roster branch (git is the only observation
+//            surface), verify EVERY published receipt chain from genesis (fail-closed: a
+//            broken chain halts the float), cross-check lesson citations, taught-by citations
+//            (the cited foreign git tip must be an ancestor of the branch it NAMES; cited
+//            foreign chain tip must exist in that branch's chain — no laundering),
+//            cross-check state.json dials, then compute WHY-RATE + pin regressions for every
+//            quilt and SELECT the next exchange prompt from the fixed menu by simple scoring
+//            (the ML selection is receipted, never silent).
 // finalize — assemble the recorded tick table (runs/session-tips.json) from the live
 //            per-tick rows (runs/session-ticks.jsonl).
 // replay   — re-derive the ENTIRE tick table from genesis off the pushed branches alone
@@ -25,10 +25,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   RATE, REDACT, git, gitOk, readJson, writeJson, readJsonl, appendJsonl,
-  chainVerifyEntries, chainTipOf, metrics, MENU, selectPrompt,
+  chainVerifyEntries, chainTipOf, metrics, MENU, selectPrompt, AGENTS, counterpartsOf,
 } from './float-lib.mjs';
 
-const AGENTS = ['alpha', 'beta'];
 const argv = process.argv.slice(2);
 const arg = (name, dflt) => {
   const i = argv.indexOf(name);
@@ -54,9 +53,12 @@ function stateAtTip(cwd, tip, agent) {
 }
 
 // The organ-law cross-checks: nothing a quilt cites may exist only in its imagination.
-function crossChecks(cwd, agent, st, otherTip, otherChainHashes) {
+// Fleet law (session 3): a taught-by cites ONE branch — cites.foreignBranch names it, and
+// the citation is verified against THAT branch (ancestor + chain membership), never against
+// a hard-coded counterpart. Citing an unpublished branch, an unknown branch, or SELF is
+// refused — no laundering, no self-citation.
+function crossChecks(cwd, agent, st, tips, published, chainHashes) {
   const errs = [];
-  const other = agent === 'alpha' ? 'beta' : 'alpha';
   // (i) lesson files carry the receipt chain in-file (prev-tip → tip must match the chain)
   for (const e of st.chain) {
     if (!e.ref.startsWith('lessons/')) continue;
@@ -71,17 +73,22 @@ function crossChecks(cwd, agent, st, otherTip, otherChainHashes) {
     if (c.kind !== 'taught-by') continue;
     const cites = c.cites ?? {};
     if (!cites.gitTip || !cites.chainTip) { errs.push(`TAUGHTBY_UNCITED ${c.id}`); continue; }
-    if (!gitOk(cwd, 'merge-base', '--is-ancestor', cites.gitTip, otherTip))
-      errs.push(`TAUGHTBY_CITE_NOT_ANCESTOR ${c.id}: ${cites.gitTip} not on ${other}'s branch`);
-    if (!otherChainHashes.has(cites.chainTip))
-      errs.push(`TAUGHTBY_CITE_CHAIN_TIP_UNKNOWN ${c.id}: ${cites.chainTip} not in ${other}'s chain`);
+    const cited = String(cites.foreignBranch ?? '').replace(/^float\//, '');
+    if (!AGENTS.includes(cited)) { errs.push(`TAUGHTBY_CITE_BRANCH_UNKNOWN ${c.id}: ${cites.foreignBranch}`); continue; }
+    if (cited === agent) { errs.push(`TAUGHTBY_CITE_SELF ${c.id}: cites ${cites.foreignBranch}`); continue; }
+    if (!published[cited]) { errs.push(`TAUGHTBY_CITE_UNPUBLISHED ${c.id}: ${cites.foreignBranch} not published`); continue; }
+    if (!gitOk(cwd, 'merge-base', '--is-ancestor', cites.gitTip, tips[cited]))
+      errs.push(`TAUGHTBY_CITE_NOT_ANCESTOR ${c.id}: ${cites.gitTip} not on ${cited}'s branch`);
+    if (!chainHashes[cited].has(cites.chainTip))
+      errs.push(`TAUGHTBY_CITE_CHAIN_TIP_UNKNOWN ${c.id}: ${cites.chainTip} not in ${cited}'s chain`);
     // (iii) the taught-by cell's own receipt object must be a real chain entry
     const e = st.chain.find(x => x.ref === `cells/${c.id}.json`);
     if (!e) errs.push(`TAUGHTBY_NO_CHAIN_ENTRY ${c.id}`);
     else if (!c.receipt || c.receipt.hash !== e.hash) errs.push(`TAUGHTBY_RECEIPT_MISMATCH ${c.id}`);
-    // (iv) no half-materialized citations: an unsubstituted {{FOREIGN_*}} placeholder in a
-    // published cell is a template that never met the fetch it claims to describe
-    if (JSON.stringify(c).includes('{{FOREIGN_'))
+    // (iv) no half-materialized citations: an unsubstituted placeholder ({{FOREIGN_*}} or a
+    // per-peer {{ALPHA_*}}/{{BETA_*}}/{{GAMMA_*}} namespace) in a published cell is a
+    // template that never met the fetch it claims to describe
+    if (/\{\{[A-Z][A-Z0-9]*_/.test(JSON.stringify(c)))
       errs.push(`TAUGHTBY_TEMPLATE_LEAK ${c.id}: unpublished placeholder in published cell`);
   }
   // (v) state.json dials must not lie
@@ -120,17 +127,17 @@ if (cmd === 'tick') {
   const st = {};
   for (const a of AGENTS) if (published[a]) st[a] = stateAtTip(repoDir, tips[a], a);
 
-  // THE ORGAN LAW: both published chains re-derived from genesis, every tick, fail-closed.
+  // THE ORGAN LAW: every published chain re-derived from genesis, every tick, fail-closed.
   const errs = [];
   for (const a of AGENTS) {
     if (published[a] && !st[a].v.ok) errs.push(`${a}: ${st[a].v.error} @seq ${st[a].v.at} (${st[a].v.detail})`);
   }
+  const chainHashes = {};
+  for (const a of AGENTS) chainHashes[a] = published[a] ? new Set(st[a].chain.map(e => e.hash)) : new Set();
   if (!errs.length) {
     for (const a of AGENTS) {
       if (!published[a]) continue;
-      const o = a === 'alpha' ? 'beta' : 'alpha';
-      const otherHashes = published[o] ? new Set(st[o].chain.map(e => e.hash)) : new Set();
-      errs.push(...crossChecks(repoDir, a, st[a], published[o] ? tips[o] : tips[a], otherHashes, published[o]));
+      errs.push(...crossChecks(repoDir, a, st[a], tips, published, chainHashes));
     }
   }
   if (errs.length) {
@@ -152,37 +159,50 @@ if (cmd === 'tick') {
   appendJsonl(path.join(runsDir, 'session-ticks.jsonl'), row);
 
   // ---- the ML selection: score the fixed menu for THIS agent's next exchange ----
-  const other = agent === 'alpha' ? 'beta' : 'alpha';
+  // Fleet generalization: the counterpart is a MAP of peers. Per-peer why-deltas and new
+  // cells are tracked separately; the menu inputs are the MAX delta (some peer rising —
+  // M1's trigger) and the SUM of new cells (total unread surface). Two-agent behavior is
+  // the degenerate case (one peer → max = sum = the old numbers).
   const trajFile = path.join(runsDir, 'watch-trajectory.json');
   const traj = fs.existsSync(trajFile) ? readJson(trajFile) : {};
   traj[agent] = traj[agent] ?? { foreign: null };
-  const fNow = published[other]
-    ? { rate: st[other].m.whyRate, cells: st[other].m.cells }
-    : { rate: null, cells: 0 };
-  const prevF = traj[agent].foreign;
-  const delta = (prevF && prevF.rate != null && fNow.rate != null) ? RATE(fNow.rate - prevF.rate) : 0;
-  const fNew = (prevF && prevF.rate != null) ? Math.max(0, fNow.cells - prevF.cells) : 0;
+  // legacy trajectory (sessions 1–2): foreign was ONE counterpart's {rate, cells} — key it
+  // under that peer (roster order makes counterpartsOf(agent)[0] the legacy counterpart).
+  if (traj[agent].foreign && !traj[agent].foreign.peers) {
+    const legacyPeer = counterpartsOf(agent)[0];
+    traj[agent] = { foreign: { peers: { [legacyPeer]: traj[agent].foreign } } };
+  }
+  const fPeers = {};
+  const detail = {};
+  let maxDelta = 0, sumNew = 0;
+  for (const p of counterpartsOf(agent)) {
+    fPeers[p] = published[p] ? { rate: st[p].m.whyRate, cells: st[p].m.cells } : { rate: null, cells: 0 };
+    const prev = traj[agent].foreign?.peers?.[p] ?? null;
+    const delta = (prev && prev.rate != null && fPeers[p].rate != null) ? RATE(fPeers[p].rate - prev.rate) : 0;
+    const fNew = prev ? Math.max(0, fPeers[p].cells - prev.cells) : 0;
+    detail[p] = { whyDelta: delta, newCells: fNew };
+    if (delta > maxDelta) maxDelta = delta;
+    sumNew += fNew;
+  }
   const sel = selectPrompt({
-    foreignWhyDelta: delta, foreignNewCells: fNew,
+    foreignWhyDelta: maxDelta, foreignNewCells: sumNew,
     ownRegressions: m.regressions, ownWhyRate: m.whyRate,
   });
   const prow = {
     n: readJsonl(path.join(runsDir, 'prompts.jsonl')).length + 1,
     agent, tick: Number(tickN), phase,
-    foreignWhyDelta: delta, foreignNewCells: fNew,
+    foreignWhyDelta: maxDelta, foreignNewCells: sumNew, foreignPeers: detail,
     ownWhyRate: m.whyRate, ownRegressions: m.regressions,
     scores: sel.scores, chosen: sel.chosen, prompt: MENU[sel.chosen],
   };
   appendJsonl(path.join(runsDir, 'prompts.jsonl'), prow);
-  traj[agent].foreign = fNow;
+  traj[agent] = { foreign: { peers: fPeers } };
   writeJson(trajFile, traj);
 
-  const otherDesc = published[other]
-    ? `${other} ${st[other].v.count} entries @${st[other].v.tip.slice(0, 7)}`
-    : `${other} UNPUBLISHED (medium starts empty)`;
-  console.log(`[float-watch] tick ${tickN} (${agent} ${phase}): chains ok from genesis ` +
-    `(alpha ${published.alpha ? st.alpha.v.count + ' @' + st.alpha.v.tip.slice(0, 7) : 'unpublished'}, ` +
-    `beta ${published.beta ? st.beta.v.count + ' @' + st.beta.v.tip.slice(0, 7) : 'unpublished'}) · ` +
+  const chainDesc = AGENTS.map(a =>
+    `${a} ${published[a] ? st[a].v.count + ' @' + st[a].v.tip.slice(0, 7) : 'unpublished'}`).join(', ');
+  console.log(`[float-watch] tick ${tickN} (${agent} ${phase}): ${AGENTS.length} chains ok from genesis `+
+    `(${chainDesc}) · ` +
     `${agent} quilt: ${m.cells} cells, why-rate ${m.whyRate}, regressions ${m.regressions} · ` +
     `menu: M1=${sel.scores.M1} M2=${sel.scores.M2} M3=${sel.scores.M3} → ${sel.chosen}`);
   process.exit(0);

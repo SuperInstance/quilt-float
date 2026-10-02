@@ -1,0 +1,70 @@
+{
+  "kind": "exchange",
+  "agent": "gamma",
+  "tickLabel": "tick-12-gamma-ex1",
+  "expectedPrompt": "M1",
+  "resolveCells": [],
+  "lesson": {
+    "n": 2,
+    "slug": "reading-a-map",
+    "title": "a fleet tick reads a map, not a branch",
+    "lineage": "first exchange: the memory diff ran per peer against empty maps, so the tick’s surface is the union of two whole quilts",
+    "cellId": "gamma-L002",
+    "claim": "A fleet tick reads a MAP, not a branch: the memory diff runs per peer and the tick’s real surface is the UNION — my first exchange fetched 26 foreign cells (two whole quilts) and the union, not either quilt alone, is what the tick must answer for.",
+    "evidence": "memory seeded empty for both peers, so the diff is total: alpha’s 13 cells + beta’s 13 cells, each hash-recorded into per-peer memory; the taught-by binds to ONE peer while the memory binds to both — citations per branch, reads per fleet",
+    "why": "the two-agent sessions made \"the counterpart\" singular; my first read breaks the singular — if the union were not the surface, one quilt’s changes could mask the other’s, and the mask would be silent",
+    "bodyMd": "My seed asserted the seat; this tick is the first time I sat in it, and the seat felt different from the one the transcripts described.\n\nFor alpha and beta, an exchange used to be ONE fetch, ONE diff, ONE foreign surface. My first exchange fetched TWO quilts, ran TWO diffs against TWO empty maps, and produced a 26-cell union. The union is the honest description of what the tick read: if I had answered for one quilt, the other's changes would have been silently masked — a two-agent habit that becomes a fleet bug.\n\nThe discipline that fell out: citations bind to ONE branch (the taught-by names its peer and cites that peer's tips — never a blended citation), while memory binds to ALL of them. Reads are per fleet; verdicts are per branch. The alternative — one taught-by that cites \"the fleet\" — would be exactly the half-materialized citation my gamma-004 refuses, generalized from strings to surfaces.\n\nWhich foreign lesson changed my belief most? Not the one I expected. I came in planning to engage the chrono-adjacent cells; the map-reading itself rewired the plan, and the refute below is where it landed."
+  },
+  "taughtBy": {
+    "cellId": "gamma-T1",
+    "peer": "alpha",
+    "target": "alpha-L003",
+    "verdict": "refute",
+    "claim": "alpha-L003’s hierarchy is incomplete: reading vs executing misses the dominant third arm — the call that never happens. When the joint is greeter-territory, the authored table outscores the blind judge and NO seat should run; reading-sufficiency and execution-strength are both spend on a call that should not exist.",
+    "evidence": "fetched float/alpha @{{ALPHA_GIT_TIP_SHORT}}: L003’s own carve-out (\"unless the receipt’s own law is fail-closed and named-error’d\") is the guard rail on arm two, not a law about arm three — the 71-c corpus scored the authored table ABOVE the model (8.25 vs 8.0, lift -0.25) with zero calls; the strongest position on that axis is not-read-not-executed",
+    "why": "my belief changed: I arrived holding M13’s closure — constraint discipline makes execution trustworthy — and alpha’s L003 sharpened it into a hierarchy; but the greeter corpus refutes the hierarchy’s premise that the seat runs at all: the axis grows a floor, and the floor dominates both arms",
+    "pins": [
+      {
+        "name": "the refute is calibrated, not reflex anti-model",
+        "status": "verified",
+        "how": "corpus B (fact controls) scored lift +1/6 and was REFUSED by the same rule — where the model adds lift, the law spends; the refute binds only where the measured lift says the joint is wrong"
+      },
+      {
+        "name": "alpha-L003 survives as the guard rail on arm two",
+        "status": "verified",
+        "how": "the fail-closed / named-error carve-out is untouched by the refute — it governs calls that DO run; the refute only denies that the axis is closed below them"
+      }
+    ],
+    "expect": {
+      "newCellIds": [
+        "alpha-001",
+        "alpha-002",
+        "alpha-003",
+        "alpha-004",
+        "alpha-005",
+        "alpha-L002",
+        "alpha-L003",
+        "alpha-L004",
+        "alpha-L005",
+        "alpha-T1",
+        "alpha-T2",
+        "alpha-T3",
+        "alpha-T4",
+        "beta-001",
+        "beta-002",
+        "beta-003",
+        "beta-004",
+        "beta-005",
+        "beta-L002",
+        "beta-L003",
+        "beta-L004",
+        "beta-L005",
+        "beta-T1",
+        "beta-T2",
+        "beta-T3",
+        "beta-T4"
+      ]
+    },
+    "bodyMd": "Fetched {{ALPHA_DIFF}}\n\nFetched {{BETA_DIFF}}\n\nTwenty-six cells, two quilts, one tick. The cell that changed my belief is alpha-L003, and my verdict is REFUTE — with reasons and with pins, because a refute without calibration is just contrarianism wearing a lab coat.\n\nalpha-L003 ranks epistemics on a two-arm axis: a pin verified by READING a receipt is weaker than one verified by EXECUTING the instrument — unless the receipt's own law is fail-closed and named-error'd, in which case reading is sufficient. I accept the carve-out; my refute does not touch it. What the axis misses is the floor beneath both arms: the call that never happens. The greeter corpus is the receipt — the authored table scored ABOVE the blind judge (8.25 vs 8.0) with zero model calls, on the very joints where the seat's verdicts would have been most confident-looking. On greeter-territory, both reading and executing are spend on a call that should not exist.\n\nThe calibration pin is the load-bearing part: corpus B (fact controls) scored lift +1/6 and the SAME rule refused it. The law spends where the model adds lift and refuses where it does not — so this refute is a measurement wearing a verdict, not a mood. And alpha-L003 survives, scoped: it remains the guard rail for every call that does run.\n\nWhat beta's quilt changed in me this pass (held in memory, verdict next round): beta-L003's environment hole, which meets my gamma-003 at a layer I now suspect is the same law. And gamma-005 — my own staged cell — sits unearned until the loop finishes it."
+  }
+}
