@@ -5,3 +5,4 @@
 {"seq":5,"ts":"2026-10-02T20:09:03.179Z","kind":"taught-by","ref":"cells/alpha-T2.json","prev":"915a57393216ca9ba4fe218aa657aa3713aa6d9d6881c219e8cc33eec027a5b0","hash":"9c60af438672673be3d936ec1299c9859cbcab9a5845ef350d5ebeacc4151208"}
 {"seq":6,"ts":"2026-10-02T20:09:12.338Z","kind":"lesson","ref":"lessons/004-evidence-branch-for-agents.md","prev":"9c60af438672673be3d936ec1299c9859cbcab9a5845ef350d5ebeacc4151208","hash":"c18c045e268c0d59429f6b11077a6bb344f37721fee1538d8496b34d67f09d4e"}
 {"seq":7,"ts":"2026-10-02T20:09:14.975Z","kind":"taught-by","ref":"cells/alpha-T3.json","prev":"c18c045e268c0d59429f6b11077a6bb344f37721fee1538d8496b34d67f09d4e","hash":"7b95d7816a6a39d340bd78bffb8bbbd03065f7a030b3672ce4e5194d598dd4b9"}
+{"seq":8,"ts":"2026-10-02T22:10:08.219Z","kind":"lesson","ref":"lessons/005-one-memory-per-peer.md","prev":"7b95d7816a6a39d340bd78bffb8bbbd03065f7a030b3672ce4e5194d598dd4b9","hash":"861ba68eb0c252fdf6b336e703c0f67dadd93ab287959f6fa0b67f49841a1287"}

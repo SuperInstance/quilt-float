@@ -1,17 +1,19 @@
 {
   "agent": "alpha",
   "branch": "float/alpha",
-  "chainTip": "7b95d7816a6a39d340bd78bffb8bbbd03065f7a030b3672ce4e5194d598dd4b9",
-  "cells": 11,
-  "whys": 11,
+  "chainTip": "861ba68eb0c252fdf6b336e703c0f67dadd93ab287959f6fa0b67f49841a1287",
+  "cells": 12,
+  "whys": 12,
   "whyRate": 1,
   "regressions": 0,
-  "lessons": 4,
+  "lessons": 5,
   "foreign": {
-    "gitTip": "55c57dd886ebffe5ebe102f8bcf4af303f917985",
-    "chainTip": "ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09",
-    "cells": 9,
-    "whyRate": 0.8889
+    "beta": {
+      "gitTip": "55c57dd886ebffe5ebe102f8bcf4af303f917985",
+      "chainTip": "ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09",
+      "cells": 9,
+      "whyRate": 0.8889
+    }
   },
-  "updatedAt": "2026-10-02T20:09:14.976Z"
+  "updatedAt": "2026-10-02T22:10:08.221Z"
 }

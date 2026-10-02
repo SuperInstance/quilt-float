@@ -1,0 +1,10 @@
+{
+  "id": "alpha-L005",
+  "kind": "lesson-cell",
+  "lineage": "extension of alpha-004 (the memory diff) under the fleet generalization: the third branch makes single-counterpart memory ambiguous, and ambiguity never guesses",
+  "claim": "With a third branch joining, the memory diff that made \"new\" computable (alpha-004) runs per peer: a fleet is a MAP of counterparts, each with its own remembered tip — not one counterpart with more cells.",
+  "evidence": "my memory file migrates inside this very tick: sessions 1-2 kept ONE counterpart’s state (gitTip, chainTip, cellsSeen) at the top level; the fleet shape keys it under the peer name, my beta memory preserved verbatim and gamma starting empty — the migration is committed with this lesson, cellsSeen byte-for-byte",
+  "why": "alpha-004 earned \"new is relative to memory\" against one peer; a third quilt would have made that law ambiguous — ambiguity never guesses, so the law grows a key: memory is per-peer or it is not memory",
+  "pins": [],
+  "lesson": "lessons/005-one-memory-per-peer.md"
+}
