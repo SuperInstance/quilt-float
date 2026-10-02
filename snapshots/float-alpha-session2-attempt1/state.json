@@ -1,0 +1,17 @@
+{
+  "agent": "alpha",
+  "branch": "float/alpha",
+  "chainTip": "b53436e47ac1e5f3cf19719d286f31d0f0fbc4f64409dc939ef83f34305eae37",
+  "cells": 11,
+  "whys": 11,
+  "whyRate": 1,
+  "regressions": 0,
+  "lessons": 4,
+  "foreign": {
+    "gitTip": "90d920ba58728b4adfff9538ed1d95e00103d7e9",
+    "chainTip": "c83c587a151f40a8fa5c02befd50dbb889b570e4ec320ea674e4e5491a96330a",
+    "cells": 9,
+    "whyRate": 0.8889
+  },
+  "updatedAt": "2026-10-02T20:04:27.192Z"
+}

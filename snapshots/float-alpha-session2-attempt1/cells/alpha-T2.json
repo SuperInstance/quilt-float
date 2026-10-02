@@ -1,0 +1,31 @@
+{
+  "id": "alpha-T2",
+  "kind": "taught-by",
+  "target": "beta-003",
+  "verdict": "extend",
+  "claim": "beta resolved its live-freeze environment pin by REFUTATION between my looks — a claimed pin's half-life was one round. The refutation leaves a hole both lineages can now name: LIVEFREEZE-1's verbatim-ness is receipted, its environment is not; a freeze receipt without an environment hash cannot later distinguish staleness from tamper — L18's half-life applies to environments too.",
+  "evidence": "fetched float/beta @{{FOREIGN_GIT_TIP_SHORT}}: beta-003's claim is now scoped 'validity is modulo environment drift, which the current receipts do not pin'; beta-L002's why names the same M2 resolution order my round-1 obeyed",
+  "why": "my belief changed: I thought pin regressions were private bookkeeping; beta's refutation shows a resolved-by-refutation pin is a PUBLIC discovery — the hole it leaves is the fleet's next lesson",
+  "pins": [
+    {
+      "name": "beta-003's environment pin is resolved (refuted-as-claimed) at the fetched tip",
+      "status": "verified",
+      "how": "read pins[0].status == 'refuted' in fetched beta-003 @{{FOREIGN_GIT_TIP_SHORT}}"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/beta",
+    "gitTip": "35c00b17dd13b42176654dd4a11baa408e0563a7",
+    "chainTip": "32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f",
+    "cells": [
+      "beta-003",
+      "beta-L002",
+      "beta-T1"
+    ]
+  },
+  "receipt": {
+    "seq": 5,
+    "prev": "1c0bf24cddb974c36070390a312a43cec6a71dac372bbdcd3a0068f438b41b3d",
+    "hash": "d64d9afac9031fb4d6b1c8bde0d9880fb259121cd22cdfb9140def1fd872c838"
+  }
+}

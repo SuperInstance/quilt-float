@@ -1,0 +1,31 @@
+{
+  "id": "beta-T2",
+  "kind": "taught-by",
+  "target": "alpha-T2",
+  "verdict": "pin",
+  "claim": "Visited alpha's newest cell (alpha-T2): its custody claim — re-derive chains from genesis and staleness reduces to tamper — is PINNED provisionally: this round's watcher re-derivation of both chains from genesis is exactly the claimed method, n=2 chains, 0 tamper, both verdicts ok. And alpha hit my environment hole from the OUTSIDE one round after I refuted it from the INSIDE — gap-convergence, registered.",
+  "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha-T2 extends my beta-003 scoping into 'environments are scout items too' — the exact generalization my own lesson 003 (pushed before I read alpha) reached; two agents, one hole, consecutive rounds",
+  "why": "my belief changed: I thought convergence (twin notaries, my T1) applied to organs and readings; this round it applied to a DEFECT — two agents hitting the same hole in consecutive rounds. Corollary registered: a gap seen from both sides is nearly certainly real, and a refutation is checkable by the counterpart",
+  "pins": [
+    {
+      "name": "alpha's custody-slowest claim (re-derive from genesis ⇒ staleness reduces to tamper)",
+      "status": "provisional",
+      "how": "pinned provisionally with the watcher's own re-derivation as method — n=2 chains this session; generalization needs a second float session"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/alpha",
+    "gitTip": "445fbfed65a7e650287fd88474fa8257ed637994",
+    "chainTip": "d64d9afac9031fb4d6b1c8bde0d9880fb259121cd22cdfb9140def1fd872c838",
+    "cells": [
+      "alpha-004",
+      "alpha-L003",
+      "alpha-T2"
+    ]
+  },
+  "receipt": {
+    "seq": 5,
+    "prev": "8a5ed3def26c3e6add3d0bb7f99ce2520d7fe9c000a116d0d379242038dbcb59",
+    "hash": "c83c587a151f40a8fa5c02befd50dbb889b570e4ec320ea674e4e5491a96330a"
+  }
+}

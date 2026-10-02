@@ -40,6 +40,23 @@ After every tick the watcher (`float-watch.mjs`, stdlib only) runs fail-closed:
 5. `finalize` records the tick table; `replay` re-derives the entire table from genesis off the
    pushed branches alone — **byte-equal to the recorded table is the determinism check**.
 
+## Session 2 — completed 2026-10-02: the first cross-agent taught-by cell (see runs/float-session-2.md)
+
+- Resumed off the session-1 seal with the L21 law installed: every directive is validated
+  pre-tick (`E_DIRECTIVE_SCHEMA`, missing field named, fail-closed, unit-tested
+  test/directive-schema.test.mjs) — the tick-3 death class is structurally refused.
+- All 6 exchange ticks ran (ticks 3–8): **6 taught-by cells exist** — alpha-T1 (extend,
+  beta-001), beta-T1 (agree, alpha-003), alpha-T2 (extend, beta-003), beta-T2 (pin,
+  alpha-T2), alpha-T3 (pin, beta-T2), beta-T3 (agree, alpha-T3). Why-rate **0.6 → 1.0
+  both agents**; regressions **1 → 0 both**; two provisional claims planted for a future
+  session (custody-slowest, gap-convergence).
+- Watcher: chains ok from genesis at every tick; the divergence check byte-equal after
+  tick 8 (`finalize` == `replay`, sha256 e71791b1…). No HALT.
+- Attempt-1 of the resume was aborted pre-transcript (placeholder leak in taught-by
+  evidence prose) — quilts preserved verbatim at snapshots/float-{alpha,beta}-session2-attempt1/,
+  rows at runs/session2-attempt1/, fix = 7fa70b2 (substitute every taught-by string +
+  watcher TAUGHTBY_TEMPLATE_LEAK halt + the blind-lesson directive law).
+
 ## Session 1 — ran and died; sealed 2026-10-02 (see runs/float-session-1.md)
 
 - 2 sealed ticks: alpha seed `a05c09b0` and beta seed `0e165025`, both chains ok from genesis;
@@ -67,9 +84,14 @@ branch every tick; after that the float's laws apply to it exactly as to alpha a
 - `float-watch.mjs` — tick/finalize/replay/verify-chain-file (the ML leg + the organ law)
 - `float-lib.mjs` — the shared deterministic instrument (chain, cells, metrics, menu)
 - `session-run.sh` — the 8-tick session driver
+- `session-resume.sh` — resume driver for a dead session (ticks 3–8 + finalize + the
+  byte-equal replay gate, with the schema gate run first)
+- `test/` — the directive-schema unit test (the E_DIRECTIVE_SCHEMA law, 24 asserts)
 - `runs/` — directives (1 seed + 3 exchanges per agent), live rows (session-ticks.jsonl,
   prompts.jsonl, watch-trajectory.json, session-tips.json), the seal-time replay
-  (replay-tips.json), per-tick logs, the transcript + seal (`float-session-1.md`)
+  (replay-tips.json), per-tick logs, the transcripts + seals (`float-session-1.md`,
+  `float-session-2.md`), attempt-1 residue (`session2-attempt1/`)
 - `snapshots/` — both quilts byte-exact as of the last fetched tips
   (`float-alpha/` @ a05c09b0, `float-beta/` @ 0e165025) + the crashed tick's residue
-  (`float-alpha-partial-tick3/`)
+  (`float-alpha-partial-tick3/`) + session-2 attempt-1's quilts
+  (`float-{alpha,beta}-session2-attempt1/`)

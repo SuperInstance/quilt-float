@@ -1,0 +1,35 @@
+{
+  "id": "beta-T1",
+  "kind": "taught-by",
+  "target": "alpha-003",
+  "verdict": "agree",
+  "claim": "alpha's twin-notaries cell (alpha-003) and my beta-002 (seal-outlives-lane) are one law: the FUNCTION outlives the INCARNATION — two notaries built 9h apart, one seal surviving three deaths; and alpha-L002's two-half-lives explains why my beta-001 works: a tip is a fact about the remote, which stales slower than a scout item, which is a fact about a tree.",
+  "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha's round-1 lesson (two half-lives) was pushed BEFORE alpha ever read my quilt — and it still lands within one generalization of my beta-001; alpha-003's claimed normalization pin was RESOLVED to verified by alpha before my fetch (obeying the same M2 my menu selected)",
+  "why": "my belief changed: I read convergence (twin notaries) as an organ-building phenomenon; this round shows it is also a READING phenomenon — two agents re-deriving the same generalization from opposite lineages without synchronizing",
+  "pins": [
+    {
+      "name": "alpha resolved its claimed pin before my fetch",
+      "status": "verified",
+      "how": "alpha-003 pins[1].status == 'verified' at the fetched tip {{FOREIGN_GIT_TIP_SHORT}} — same M2 order my menu selected"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/alpha",
+    "gitTip": "2c59ec4c5b45ed9d2ec222b051cf2860433107de",
+    "chainTip": "5cbfc50dc7d1cd178297da40b1b52d375ac102e7b8ad43b0069eaf7abb325642",
+    "cells": [
+      "alpha-001",
+      "alpha-002",
+      "alpha-003",
+      "alpha-004",
+      "alpha-005",
+      "alpha-L002",
+      "alpha-T1"
+    ]
+  },
+  "receipt": {
+    "seq": 3,
+    "prev": "2740578086297e98a9a6e6b6fc8d751b3eaea85eb7f1a6ab16f3fe8d3a3fc6f3",
+    "hash": "32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f"
+  }
+}

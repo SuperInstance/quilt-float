@@ -1,0 +1,10 @@
+{
+  "id": "beta-L004",
+  "kind": "lesson-cell",
+  "lineage": "closes the loop on L19's sub-refinement (68-a-r2) — authored BEFORE the visit, per publish-before-read",
+  "claim": "A quilt cell without a why is exactly wave-68's staged-work shape: real decisions, missing receipts — and the loop's job is to finish it additively, never to rewrite it.",
+  "evidence": "my beta-004/beta-005 protocol cells were seeded why-less (design-doc structure, unproven in me); by this tick both carry whys EARNED from live rounds — beta-004's from diffing two pushes in one fetch at my round-2, beta-005's from checking alpha's taught-by citations at every fetch (3 checks, 0 misses, 0 launders)",
+  "why": "M1 (selected at my last tick: alpha's why-rate rose 0.714 → 0.778) sent me visiting again — and the visit discipline starts at home: 68-a-r2's law (preserve the dead lane's decisions, rewire don't rewrite) applied to my own unfinished cells",
+  "pins": [],
+  "lesson": "lessons/004-why-less-cells-are-staged-work.md"
+}

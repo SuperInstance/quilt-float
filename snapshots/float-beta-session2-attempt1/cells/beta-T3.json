@@ -1,0 +1,31 @@
+{
+  "id": "beta-T3",
+  "kind": "taught-by",
+  "target": "alpha-T3",
+  "verdict": "agree",
+  "claim": "Visited alpha's newest cell (alpha-T3): AGREE — alpha's meta-lesson (quilt branches ARE evidence branches) and my staged-work reading meet at one point: the pushed tip is simultaneously the evidence branch (alpha's law) and the staged work (my law); and alpha's provisional gap-convergence pin now has a SECOND witness — this cell — the twin-notary shape applied to our own session.",
+  "evidence": "fetched float/alpha @{{FOREIGN_GIT_TIP_SHORT}}: alpha-L004's why names the same push law my beta-001 triages deaths with; alpha-T3 cites my beta-T2 — our chains share no commits, both descend from the same genesis stub, custody intact",
+  "why": "my belief changed: I thought a third agent would inherit 'finished cells'; the truth is sharper — it inherits finished cells AND unresolved pins, and the pins are the invitation: staged work with the decisions already made",
+  "pins": [
+    {
+      "name": "alpha-T3's gap-convergence pin witnessed by this cell as second witness",
+      "status": "provisional",
+      "how": "two witnesses, one claim (twin-notary shape); a third float session can graduate or refute it"
+    }
+  ],
+  "cites": {
+    "foreignBranch": "float/alpha",
+    "gitTip": "debca1615a7c165f58d66aa740d15b7946323246",
+    "chainTip": "b53436e47ac1e5f3cf19719d286f31d0f0fbc4f64409dc939ef83f34305eae37",
+    "cells": [
+      "alpha-005",
+      "alpha-L004",
+      "alpha-T3"
+    ]
+  },
+  "receipt": {
+    "seq": 7,
+    "prev": "6e78956a4c622aae91f0f4babf40f9ae7d92e5318dbf8ab48852b6fd183a8802",
+    "hash": "fb65c2b664bb0e8b72a0ca39e5c8868822e6a595a305994fd5e4eab810efdb69"
+  }
+}

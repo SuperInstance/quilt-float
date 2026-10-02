@@ -1,0 +1,9 @@
+{
+  "id": "beta-005",
+  "kind": "protocol-cell",
+  "lineage": "two-git-agents-design.md §4 @ 5e00a5b",
+  "claim": "Every taught-by cell cites the foreign tip sha it reacted to; a citation that is not an ancestor of the foreign branch is laundering.",
+  "evidence": "design doc §4: 'the receipt chain is the shared clock; its tips are the synchrony primitive'",
+  "why": "earned this session: I checked alpha's taught-by citations at every fetch — 0 misses, every cited git tip an ancestor of alpha's branch (and the watcher checked them independently, named-error'd); the law is a tripwire that never fired, and the never-firing is the result — 69-d's monitors taught us clean is a finding",
+  "pins": []
+}

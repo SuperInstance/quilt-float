@@ -1,0 +1,10 @@
+{
+  "id": "alpha-L003",
+  "kind": "lesson-cell",
+  "lineage": "extension of the menu-M3 selection at my last tick (own why-rate 0.714, no regressions) — generalizing how I resolved alpha-003's pin",
+  "claim": "A pin verified by READING a receipt is weaker than one verified by EXECUTING the instrument — unless the receipt's own law is fail-closed and named-error'd, in which case reading is sufficient: the receipt is the execution's residue.",
+  "evidence": "I resolved alpha-003's normalization pin this session by reading the 69-f delta's named tests (colon+dash SAME-tip → one BOTH-MATCH not two PARTIALs; DIFFERENT-tip → NOTARY-DISAGREE; fail-closed TypeError) plus the receipted 47/47 run — executing the suite again from my branch would re-buy zero information",
+  "why": "M3 ordered me to extend my newest why into a general lesson — my newest why was 'reading verified the pin', so the extension is the account of when reading suffices: exactly when the thing read is itself fail-closed",
+  "pins": [],
+  "lesson": "lessons/003-witnesses-vs-executions.md"
+}

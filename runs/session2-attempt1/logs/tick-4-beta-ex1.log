@@ -2,29 +2,29 @@ directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
 
 # tick tick-4-beta-ex1 — agent beta (exchange)
 directive: runs/directives/beta-round-1.json
-clock: 2026-10-02T20:08:54.602Z
+clock: 2026-10-02T20:04:06.740Z
 
 menu obedience: watcher selected M2 for beta (scores M1=0 M2=1 M3=0.2) — directive obeys ✓
 prompt: "you carry unresolved pins — verify or refute them offline before claiming anything new"
 
 receipt-chain +1: seq=2 kind=lesson ref=lessons/002-resolve-before-claim.md
   prev-receipt-tip: 5a5f0aceed833dddd33e91d992cfd04f062d1091d6c43d2521e9dca8c9efa871
-  receipt-tip:      d11944b21d81159b584dc71d2b4d3d937064db8a3998efb068a0d4aa1503ebed
+  receipt-tip:      2740578086297e98a9a6e6b6fc8d751b3eaea85eb7f1a6ab16f3fe8d3a3fc6f3
 
 cell resolve: beta-003 — claim, pins rewritten additively
 
 cell materialized: beta-L002 ← lessons/002-resolve-before-claim.md
 
-lesson written: lessons/002-resolve-before-claim.md (receipt chain in-file: prev 5a5f0ac → tip d11944b)
+lesson written: lessons/002-resolve-before-claim.md (receipt chain in-file: prev 5a5f0ac → tip 2740578)
 
-commit: beta: lesson 2 — resolve before claim: the live-freeze environment pin is refuted as claimed (chain d11944b)
-quilt tip (git): cb7fb9980dc39b46ac1744f9fdd5fb7d9ead5ac6
+commit: beta: lesson 2 — resolve before claim: the live-freeze environment pin is refuted as claimed (chain 2740578)
+quilt tip (git): 94ef3245e0ca1034b0c322bd86d3c27d50b3e3af
 push → float/beta:
 
 
 (c) fetch float/alpha:
 
-foreign git tip: e61ecb2b5e15777fc5a83983e75f37b0997c739b
+foreign git tip: 2c59ec4c5b45ed9d2ec222b051cf2860433107de
 
 (d) memory diff — memory pinned at git tip ∅ (0 cells seen):
   new:     [alpha-001, alpha-002, alpha-003, alpha-004, alpha-005, alpha-L002, alpha-T1]
@@ -36,17 +36,17 @@ foreign git tip: e61ecb2b5e15777fc5a83983e75f37b0997c739b
   alpha-005: "Publish before reading: each exchange pushes its own lesson BEFORE fetching the counterpart's quilt."
   alpha-L002: "Evidence has two half-lives: compute dies in hours, knowledge stales in rounds — so push evidence early AND re…"
   alpha-T1: "beta-001 (remote-push-state-first) is my alpha-001 generalized from boot-time to death-time: one curl against …"
-foreign chain tip: 69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b (3 entries)
+foreign chain tip: 5cbfc50dc7d1cd178297da40b1b52d375ac102e7b8ad43b0069eaf7abb325642 (3 entries)
 
 expect ✓: authored reaction matches the fetch (new/changed = alpha-001, alpha-002, alpha-003, alpha-004, alpha-005, alpha-L002, alpha-T1)
 
 (e) taught-by cell: cells/beta-T1.json — verdict AGREE on alpha-003
-    cites: float/alpha@e61ecb2b5e15777fc5a83983e75f37b0997c739b (chain 69bdf4d)
+    cites: float/alpha@2c59ec4c5b45ed9d2ec222b051cf2860433107de (chain 5cbfc50)
 receipt-chain +1: seq=3 kind=taught-by ref=cells/beta-T1.json
-  prev-receipt-tip: d11944b21d81159b584dc71d2b4d3d937064db8a3998efb068a0d4aa1503ebed
-  receipt-tip:      840c080e86476c3e0bdb660b28d438ed1d17c7411e8a666036e6747c97833197
+  prev-receipt-tip: 2740578086297e98a9a6e6b6fc8d751b3eaea85eb7f1a6ab16f3fe8d3a3fc6f3
+  receipt-tip:      32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f
 
-(f) commit: beta: taught-by beta-T1 — agree alpha-003 (cites alpha@e61ecb2)
-quilt tip (git): 3af8f5807cec29edb6bc24cf959f0a583902a362
+(f) commit: beta: taught-by beta-T1 — agree alpha-003 (cites alpha@2c59ec4)
+quilt tip (git): 35c00b17dd13b42176654dd4a11baa408e0563a7
 push → float/beta:
 

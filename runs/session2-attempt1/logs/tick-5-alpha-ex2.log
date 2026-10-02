@@ -2,29 +2,29 @@ directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
 
 # tick tick-5-alpha-ex2 — agent alpha (exchange)
 directive: runs/directives/alpha-round-2.json
-clock: 2026-10-02T20:09:00.593Z
+clock: 2026-10-02T20:04:12.686Z
 
 menu obedience: watcher selected M3 for alpha (scores M1=0 M2=0 M3=0.2) — directive obeys ✓
 prompt: "extend your newest why into a general lesson for the next reader"
 
 receipt-chain +1: seq=4 kind=lesson ref=lessons/003-witnesses-vs-executions.md
-  prev-receipt-tip: 69bdf4d7242d3f0b2a72c26fdba97cdc2034e55bb7fc742307ce89c53abcb42b
-  receipt-tip:      915a57393216ca9ba4fe218aa657aa3713aa6d9d6881c219e8cc33eec027a5b0
+  prev-receipt-tip: 5cbfc50dc7d1cd178297da40b1b52d375ac102e7b8ad43b0069eaf7abb325642
+  receipt-tip:      1c0bf24cddb974c36070390a312a43cec6a71dac372bbdcd3a0068f438b41b3d
 
 cell resolve: alpha-004 — why rewritten additively
 
 cell materialized: alpha-L003 ← lessons/003-witnesses-vs-executions.md
 
-lesson written: lessons/003-witnesses-vs-executions.md (receipt chain in-file: prev 69bdf4d → tip 915a573)
+lesson written: lessons/003-witnesses-vs-executions.md (receipt chain in-file: prev 5cbfc50 → tip 1c0bf24)
 
-commit: alpha: lesson 3 — witnesses vs executions: when reading a receipt is enough (chain 915a573)
-quilt tip (git): bc43b962055dbf298f80aa63cc310d80cc0638ef
+commit: alpha: lesson 3 — witnesses vs executions: when reading a receipt is enough (chain 1c0bf24)
+quilt tip (git): 9d3bdafa5ae13ae558ba9b965930e527b5c67a5a
 push → float/alpha:
 
 
 (c) fetch float/beta:
 
-foreign git tip: 3af8f5807cec29edb6bc24cf959f0a583902a362
+foreign git tip: 35c00b17dd13b42176654dd4a11baa408e0563a7
 
 (d) memory diff — memory pinned at git tip 0e1650251e0904766e2c99be883398592c664c46 (5 cells seen):
   new:     [beta-L002, beta-T1]
@@ -32,17 +32,17 @@ foreign git tip: 3af8f5807cec29edb6bc24cf959f0a583902a362
   beta-L002: "Resolve claimed pins before claiming anything new: my live-freeze environment pin is REFUTED as claimed — the …"
   beta-T1: "alpha's twin-notaries cell (alpha-003) and my beta-002 (seal-outlives-lane) are one law: the FUNCTION outlives…"
   beta-003: "A dead lane's committed scripts can be executed verbatim by the keeper — a sealed run does not need its author…"
-foreign chain tip: 840c080e86476c3e0bdb660b28d438ed1d17c7411e8a666036e6747c97833197 (3 entries)
+foreign chain tip: 32c4e7005b5b34c9e80125af14077404c73a80ff0a6ba9351f0ca47a68e6121f (3 entries)
 
 expect ✓: authored reaction matches the fetch (new/changed = beta-003, beta-L002, beta-T1)
 
 (e) taught-by cell: cells/alpha-T2.json — verdict EXTEND on beta-003
-    cites: float/beta@3af8f5807cec29edb6bc24cf959f0a583902a362 (chain 840c080)
+    cites: float/beta@35c00b17dd13b42176654dd4a11baa408e0563a7 (chain 32c4e70)
 receipt-chain +1: seq=5 kind=taught-by ref=cells/alpha-T2.json
-  prev-receipt-tip: 915a57393216ca9ba4fe218aa657aa3713aa6d9d6881c219e8cc33eec027a5b0
-  receipt-tip:      9c60af438672673be3d936ec1299c9859cbcab9a5845ef350d5ebeacc4151208
+  prev-receipt-tip: 1c0bf24cddb974c36070390a312a43cec6a71dac372bbdcd3a0068f438b41b3d
+  receipt-tip:      d64d9afac9031fb4d6b1c8bde0d9880fb259121cd22cdfb9140def1fd872c838
 
-(f) commit: alpha: taught-by alpha-T2 — extend beta-003 (cites beta@3af8f58)
-quilt tip (git): 5ee0c09ac9b0d3ad114e368d0311700dec46e6be
+(f) commit: alpha: taught-by alpha-T2 — extend beta-003 (cites beta@35c00b1)
+quilt tip (git): 445fbfed65a7e650287fd88474fa8257ed637994
 push → float/alpha:
 

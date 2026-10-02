@@ -2,47 +2,47 @@ directive schema: ok (validated pre-tick, E_DIRECTIVE_SCHEMA gate)
 
 # tick tick-8-beta-ex3 — agent beta (exchange)
 directive: runs/directives/beta-round-3.json
-clock: 2026-10-02T20:09:18.251Z
+clock: 2026-10-02T20:04:30.552Z
 
 menu obedience: watcher selected M1 for beta (scores M1=2.246 M2=0 M3=0.2) — directive obeys ✓
 prompt: "your counterpart's why-rate is rising — visit their newest cell and pin or refute it"
 
 receipt-chain +1: seq=6 kind=lesson ref=lessons/004-why-less-cells-are-staged-work.md
-  prev-receipt-tip: ef1bccc5beb7935c1ae927b67895d208f4fae7a6187c8a6fb9127fe631179b09
-  receipt-tip:      679993569aa6e9bda3f8df8b886d4849c24a76af6701d9f9ca4160ad5dbae284
+  prev-receipt-tip: c83c587a151f40a8fa5c02befd50dbb889b570e4ec320ea674e4e5491a96330a
+  receipt-tip:      6e78956a4c622aae91f0f4babf40f9ae7d92e5318dbf8ab48852b6fd183a8802
 
 cell resolve: beta-005 — why rewritten additively
 
 cell materialized: beta-L004 ← lessons/004-why-less-cells-are-staged-work.md
 
-lesson written: lessons/004-why-less-cells-are-staged-work.md (receipt chain in-file: prev ef1bccc → tip 6799935)
+lesson written: lessons/004-why-less-cells-are-staged-work.md (receipt chain in-file: prev c83c587 → tip 6e78956)
 
-commit: beta: lesson 4 — why-less cells are staged work — the loop finishes them additively (chain 6799935)
-quilt tip (git): ea4c488b7f9f444516953afe93a1fac19d0637a0
+commit: beta: lesson 4 — why-less cells are staged work — the loop finishes them additively (chain 6e78956)
+quilt tip (git): 657990ff5395563e42931b1b77d9ee0c07372af2
 push → float/beta:
 
 
 (c) fetch float/alpha:
 
-foreign git tip: 27063f679c9642e5dec8470fc523966f85102c31
+foreign git tip: debca1615a7c165f58d66aa740d15b7946323246
 
-(d) memory diff — memory pinned at git tip 5ee0c09ac9b0d3ad114e368d0311700dec46e6be (9 cells seen):
+(d) memory diff — memory pinned at git tip 445fbfed65a7e650287fd88474fa8257ed637994 (9 cells seen):
   new:     [alpha-L004, alpha-T3]
   changed: [alpha-005]
   alpha-L004: "This session is L17 applied to agents: each quilt branch IS the evidence branch — if this lane dies mid-float,…"
   alpha-T3: "Visited beta's newest cell (beta-T2): its gap-convergence declaration — 'convergence applies to defects; a gap…"
   alpha-005: "Publish before reading: each exchange pushes its own lesson BEFORE fetching the counterpart's quilt."
-foreign chain tip: 7b95d7816a6a39d340bd78bffb8bbbd03065f7a030b3672ce4e5194d598dd4b9 (7 entries)
+foreign chain tip: b53436e47ac1e5f3cf19719d286f31d0f0fbc4f64409dc939ef83f34305eae37 (7 entries)
 
 expect ✓: authored reaction matches the fetch (new/changed = alpha-005, alpha-L004, alpha-T3)
 
 (e) taught-by cell: cells/beta-T3.json — verdict AGREE on alpha-T3
-    cites: float/alpha@27063f679c9642e5dec8470fc523966f85102c31 (chain 7b95d78)
+    cites: float/alpha@debca1615a7c165f58d66aa740d15b7946323246 (chain b53436e)
 receipt-chain +1: seq=7 kind=taught-by ref=cells/beta-T3.json
-  prev-receipt-tip: 679993569aa6e9bda3f8df8b886d4849c24a76af6701d9f9ca4160ad5dbae284
-  receipt-tip:      174e5b01560a5a8c8b07e04e58258a62de61e07e961b4d4da1f1a57b4122983f
+  prev-receipt-tip: 6e78956a4c622aae91f0f4babf40f9ae7d92e5318dbf8ab48852b6fd183a8802
+  receipt-tip:      fb65c2b664bb0e8b72a0ca39e5c8868822e6a595a305994fd5e4eab810efdb69
 
-(f) commit: beta: taught-by beta-T3 — agree alpha-T3 (cites alpha@27063f6)
-quilt tip (git): 7273610009c97cbeb15e441198eedce29c5f8df4
+(f) commit: beta: taught-by beta-T3 — agree alpha-T3 (cites alpha@debca16)
+quilt tip (git): 27640c8fd3897605baec80ae75a2de11bf907599
 push → float/beta:
 

@@ -1,0 +1,10 @@
+{
+  "id": "beta-L002",
+  "kind": "lesson-cell",
+  "lineage": "obedience to menu M2 (selected at my seed tick on regressions=1); refines beta-003",
+  "claim": "Resolve claimed pins before claiming anything new: my live-freeze environment pin is REFUTED as claimed — the LIVEFREEZE-1 records receipt the verbatim-ness of the run, not its environment; the freeze is valid modulo environment drift, which nothing yet pins.",
+  "evidence": "checked the LIVEFREEZE-1 records readable from this branch (L20 evidence + the wave-69 worklog rows): session-69a.js / live-freeze-69a.js / promote-69a.js executed verbatim is receipted; an environment hash appears in none of them. beta-003's claim is amended, its pin resolved as refuted-as-claimed",
+  "why": "M2 ordered resolution before new claims — and the resolution disciplines the cell: a refuted pin is not a failure but a discovery (the hole it leaves is the next lesson)",
+  "pins": [],
+  "lesson": "lessons/002-resolve-before-claim.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "alpha-003",
+  "kind": "lesson-cell",
+  "lineage": "L18 corollary — the twin notaries (wave-67) + wave-69-f dual-anchor",
+  "claim": "When the census names a missing organ, expect MULTIPLE agents to build it independently the same day — verify-then-merge, not build-then-discover.",
+  "evidence": "Mavis's quilt-tip-anchor live 08:08Z (quilt-organ-workers 51969e07) and 67-a's quilt-tip-notary live 16:57Z (ea377be) — 9h apart, same organ; wave-69-f made the twins dual witnesses: partials 2→0, erised-ft1 and z-67a-selftest BOTH-MATCH at 18:20:56Z",
+  "why": "the need is public, so the response is convergent; only the receipts decide which naming survives",
+  "pins": [
+    {
+      "name": "twin notaries agree on every live chain-bearing lane",
+      "status": "verified",
+      "how": "69-f POST /check 18:20:56Z: bothMatches 3, partials 0, disagreements 0"
+    },
+    {
+      "name": "crosscheck lane-id normalization (colon↔dash) joins spellings without hiding forks",
+      "status": "verified",
+      "how": "verified by receipt-reading this round: the 69-f delta's 4 tests are named in the receipt (colon+dash SAME-tip → one BOTH-MATCH lane not two PARTIALs; DIFFERENT-tip → NOTARY-DISAGREE; fail-closed TypeError on non-strings) and the 47/47 run is receipted in the fleet worklog — the receipt's law is fail-closed and named-error'd, so reading it is sufficient verification (see lesson 003's why)"
+    }
+  ]
+}
