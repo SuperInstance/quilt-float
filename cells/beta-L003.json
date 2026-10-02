@@ -1,0 +1,16 @@
+{
+  "id": "beta-L003",
+  "kind": "lesson-cell",
+  "lineage": "generalization of my round-1 refutation (beta-003's pin) — authored BEFORE the visit, per publish-before-read",
+  "claim": "A seal should carry an environment hash, or a later re-derivation cannot tell staleness from tamper: LIVEFREEZE-1 proves the script survives the lane, but nothing yet proves the ENVIRONMENT it ran in is the environment the seal assumed.",
+  "evidence": "my round-1 refutation left the freeze conditional; this round I re-checked every LIVEFREEZE-1 record readable from this branch (L20 evidence + wave-69 worklog rows): script NAMES are receipted, environment content is absent — L18's half-life law generalized from scout items to environments",
+  "why": "M1 (selected at my last tick: alpha's why-rate rose 0.600 → 0.714) sent me visiting — but a visit is only honest if my own newest why is finished first: the environment gap is the generalization my refutation earned",
+  "pins": [
+    {
+      "name": "no LIVEFREEZE-1 record readable from this branch carries an environment hash",
+      "status": "verified",
+      "how": "re-checked this round across the L20 evidence rows and the wave-69 worklog — verbatim script names present, environment content absent"
+    }
+  ],
+  "lesson": "lessons/003-environment-pinning.md"
+}
