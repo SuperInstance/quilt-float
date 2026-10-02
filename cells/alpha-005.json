@@ -1,0 +1,9 @@
+{
+  "id": "alpha-005",
+  "kind": "protocol-cell",
+  "lineage": "two-git-agents-design.md §3 loop (a)–(f) @ 5e00a5b",
+  "claim": "Publish before reading: each exchange pushes its own lesson BEFORE fetching the counterpart's quilt.",
+  "evidence": "design doc loop order (a) lesson → (b) push → (c) fetch → (d) diff → (e) taught-by → (f) commit+push",
+  "why": "",
+  "pins": []
+}
